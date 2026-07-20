@@ -1,0 +1,1520 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@view-transition {
+  navigation: auto;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    view-transition-name: main-card;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100vh;
+}
+
+::view-transition-old(main-card) {
+    animation: 0.4s ease both slide-out;
+} 
+
+::view-transition-new(main-card) {
+    animation: 0.4s ease both slide-out;
+}
+
+@keyframes slide-out {
+    from {opacity: 1; transform: translateX(0);}
+    to {opacity: 0; transform: translateX(-20px);}
+}
+
+@keyframes slide-in {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateX(0);}
+}
+
+header {
+    display: flex;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.slider-container {
+    /* position: relative; */
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: rgba(128, 128, 128, 0.03);
+}
+
+
+
+.slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.slider-content {
+    position: absolute;
+    color: white;
+    top: 36%;
+} 
+
+.slider-content h1 {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    font-size: 50px;
+    width: 650px;
+    padding-left: 100px;
+    letter-spacing: 2px;
+    padding-bottom: 45px;
+    font-family: "Lora", serif;
+}
+
+.slider-content h1.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav {
+    display: flex;
+    position: absolute;
+    gap: 400px;
+    position: fixed;
+    width: 1400px;
+    background-color: rgba(128, 128, 128, 0.194);
+    z-index: 1;
+    transform: translateY(-50%);
+    transition: opacity 1.0s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+nav.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+
+
+.nav-bar {
+    display: flex;
+    width: 800px;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size:  14px;
+    height: 20px;
+    font-family: "inter", sans-serif;
+}
+
+.nav-bar a:hover {
+    color: gray;
+    transform: translateY(-5px) scale(1.09);
+}
+
+
+.liner {
+    width: 1500px;
+    height: 4px;
+    padding-left: 30px;
+
+}
+
+.line {
+    width: 1200px;
+    height: 1.5px;
+    background-color: white;
+    opacity: 0;
+    transform: translateX(50%);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.line.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.underline {
+    display: flex;
+    padding-top: 40px;
+    padding-left: 20px;
+    gap: 400px;
+    
+}
+
+.underline p {
+    color: white;
+    font-size: 20px;
+    font-family: "Lora", serif;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.underline p.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.underline button {
+    width: 180px;
+    height:     40px;
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 17.5px;
+    font-weight: 100;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.underline button.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.underline button:hover {
+    transform: translateX(-7px) scale(1.20);
+}
+
+.desktop-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 180px;
+    padding-left: 100px;
+    height: 600px;
+}
+
+.top-sec {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    padding-left: 100px;
+}
+
+.top-sec h2 {
+    padding-left: 250px;
+    font-size: 40px;
+    font-weight: 300;
+    width: 600px;
+    transform: translateX(100%);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.top-sec h2.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.top-sec h1 {
+    padding-left: 60px;
+    padding-top: 10px;
+    font-size: 60px;
+    width: 1200px;
+    font-weight: 300;
+    transform: translateX(50%);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+ 
+.top-sec h1.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.top-sec p {
+    width: 850px;
+    padding-top: 20px;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.top-sec p.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.images {
+    display: flex;
+    gap: 30px;
+}
+
+.images img {
+    width: 550px;
+    padding-top: 60px;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.images img.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mid-sec {
+    display: flex;
+    gap: 300px;
+    padding-top: 140px;
+}
+
+
+.mid-sec p {
+    width: 550px;
+    font-family: "inter", sans-serif;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.mid-sec p.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.known {
+    font-size: 19px;
+}
+
+.known h1 {
+    font-weight: 100;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.known h1.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.desktop-main {
+    padding-top: 550px;
+}
+
+
+.slider-container2 {
+    position: relative;
+    width: 100vw;
+    height: 85vh;
+    overflow-x: hidden;
+}
+
+.slider-track {
+    display: flex;
+    width: 200vw;
+    height: 100%;
+}
+
+.slide-group {
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    justify-content: space-around;
+    padding: 0 2vw;
+    gap: 20px;
+}
+
+.image-card {
+    flex: 1;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transform: translateX(50%);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.image-card.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.about-sec {
+    display: flex;
+    padding-top: 100px;
+}
+
+.black {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width: 700px;
+    height: 100vh;
+}
+
+.shoe {
+    position: absolute;
+    width: 290px;
+    height: 360px;
+    left: 50%; 
+    transform: translateX(55%);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.shoe.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.about-text h1 {
+    padding-left: 150px;
+    font-size: 46px;
+    font-family: "lora", sans-serif;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.about-text h1.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-text p {
+    width: 600px;
+    padding-left: 20px;
+    padding-top: 30px;
+    font-family: "Lora", serif;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.about-text p.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.butt {
+    width: 600px;
+    height: 100px;
+    padding-left: 200px;
+    padding-top: 40px;
+}
+
+.mor {
+    width: 100px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.mor.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mor:hover {
+    color: #000000;
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.image-back {
+    background-image: url(/black.jpg);
+    background-color: rgba(18, 11, 11, 0.103);
+    width: 600px;
+}
+
+.new-sec {
+    display: flex;
+    gap: 400px;
+    padding-top: 100px;
+    height: 100vh;
+    background-image: url(/love.png);
+    
+}
+
+.first-sec {
+    width: 800px;
+    padding-left: 40px;
+    background: rgba(18, 11, 11, 0.02);
+
+   
+}
+.first-sec h2 {
+    color: gray;
+    font-family: "lora", sans-serif;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.first-sec h2.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.first-sec p {
+    padding-top: 12px;
+    color: gray;
+    font-size: 20px;
+    font-family: "inter", sans-serif;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.first-sec p.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.star {
+    padding-top: 400px;
+}
+
+.star p {
+    color: gray;
+    font-size: 20px;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.star p.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.star img {
+    width: 100px;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.star img.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.weddings {
+    display: flex;  
+    flex-direction: column;
+    height: 700px;
+    gap: 10px;
+}
+
+.wed {
+    display: flex;
+    height: 200px;
+    gap: 850px;
+    padding-top: 60px;
+    padding-left: 50px;
+}
+
+.wed h1 {
+    font-size: 50px; 
+    font-family: "lora", sans-serif;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.wed h1.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.black-butt {
+    width: 80px;
+    height: 60px;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.black-butt.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.black-butt:hover {
+    background-color: rgba(128, 128, 128, 0.228);
+    color: #000000;
+    border: none;
+}
+
+.imaging {
+    display: flex;
+    padding-left: 40px;
+    gap: 20px;
+
+}
+
+
+    
+.wedding-card {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    border-radius: 24px;      
+    overflow: hidden;     
+    cursor: pointer;
+    border: 3px solid transparent;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+.wedding-card.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+     
+.wed-im {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* transition: transform 0.5 ease;  */
+} 
+
+.text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 30px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.tt {
+    color: white;
+    font-size: 33px;
+    font-family: "Corinthia", cursive;
+    margin: 0;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.wedding-card:hover .text-overlay {
+    opacity: 1;
+}
+
+.wedding-card:hover .tt {
+    transform: translateY(0);
+}
+
+.wedding-card:hover .wed-im {
+    transform: scale(1.07);
+}
+
+.new-main {
+    height: 200px;
+    padding-bottom: 1200px;
+}
+
+footer {
+    display: flex;
+    /* gap: 200px; */
+    justify-content: space-evenly;
+    height: 300px;
+    width: 100%;
+    padding-top: 40px;
+    padding-left: 50px;
+}
+
+.first-foot {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+    width: 300px;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.first-foot.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.first-foot p {
+    line-height: 25px;
+    font-style: italic;
+    font-size: 20px;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.first-foot p.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.first-foot img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.first-foot img.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.second-foot {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.second-foot.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.second-foot h2 {
+    font-family: "inter", sans-serif;
+    font-weight: 300;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.second-foot h2.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.second-foot a {
+    text-decoration: none;
+    color: #000000;
+    line-height: 32px;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.second-foot a.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.second-foot a:hover {
+    font-size: 20px;
+}
+
+.third-foot {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.third-foot.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.third-foot p {
+    width: 200px;
+    padding-top: 20px;
+    font-family: "inter", sans-serif;
+    font-size: 15px;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.third-foot p.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+  
+.third-foot h2 {
+    font-family: "inter", sans-serif;
+    font-family: 20px;
+    font-weight: 300;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.third-foot h2.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile {
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        padding-top: 500%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .mobile-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 800px;
+        width: 100%;
+        gap: 20px;
+        background-size: cover;
+    }
+    
+   /* ==========================================================================
+   1. NAVIGATION CONTAINER & LOGO
+   ========================================================================== */
+.mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    background-color: #11111145; /* Dark theme match */
+    color: #fff;
+    position: relative;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   2. HAMBURGER BUTTON (Outer Wrapper)
+   ========================================================================== */
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 16px; /* Height determines the spacing between the 2 lines */
+    padding: 0;
+    position: relative;
+    z-index: 101;
+}
+
+/* ==========================================================================
+   3. HAMBURGER LINES (Default Closed State - Parallel Lines)
+   ========================================================================== */
+.line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center; /* Crucial for rotating cleanly from the middle */
+}
+
+/* Ensure lines start perfectly flat on page load */
+.line-1 {
+    transform: translateY(0) rotate(0deg);
+}
+
+.line-2 {
+    transform: translateY(0) rotate(0deg);
+}
+
+/* ==========================================================================
+   4. ACTIVE STATE (When clicked, form a clean "X")
+   ========================================================================== */
+/* Move line 1 down to the middle and spin it 45 degrees */
+.menu-toggle.active .line-1 {
+    transform: translateY(7px) rotate(45deg); 
+} 
+
+/* Move line 2 up to the middle and spin it -45 degrees */
+.menu-toggle.active .line-2 {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ==========================================================================
+   5. DROPDOWN MENU (Default Closed State - Completely Hidden)
+   ========================================================================== */
+.nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    display: flex; /* Keep flex layout but hide it visually */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 0;
+    
+    /* --- KEY FIXES FOR HIDING --- */
+    opacity: 0;
+    visibility: hidden; /* This completely hides the menu on page load */
+    transform: translateY(-10px); /* Slightly tucked up */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+/* ==========================================================================
+   6. DROPDOWN MENU ACTIVE STATE (Slides down & fades in when clicked)
+   ========================================================================== */
+.nav-menu.active {
+    opacity: 1;
+    visibility: visible; /* Makes it interactive and visible */
+    transform: translateY(0px); /* Slides down to original position */
+}
+
+/* Links Styling */
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover {
+    color: #c5a880; /* Gold/champagne hover */
+}
+
+
+    .nav-menu a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        transition: color 0.2s;
+    }
+
+    .nav-menu a:hover {
+        color: #c5a880; /* Subtle gold/champagne hover color */
+    }
+
+    .nav-menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+    }
+
+
+
+    .mobile-nav img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .mobile-header h1 {
+        width: 600px;
+        text-align: center;
+        color: white;
+        padding-top: 75px;
+        font-size: 46px;
+    }
+
+    .blank {
+        width: 500px;
+        height: 1px;
+        border: 1px solid white;
+    }
+
+    .mobile-header p {
+        color: white;
+        font-size: 20px;
+    }
+
+    .mobile-main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 30px;
+        height: 650px;
+    }
+
+    .mobile-flower {
+        width: 700px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .mobile-hug {
+        width: 700px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .mobile-section {
+        display: flex;
+        flex-direction: column;
+        padding-top: 150px;
+        padding-left: 30px;
+        width: 100%;
+    }
+
+    .mobile-known {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-known h1 {
+        font-weight: 300;
+    }
+
+    .mobile-section p {
+        width: 500px;
+        padding-top: 15px;
+        font-family: "inter", sans-serif;
+        font-size: 14px;
+    }
+
+    /* 1. Hide the horizontal scrollbar */
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  display: flex;
+  background-color: #ffffff; /* Clean luxury background */
+  padding: 20px 0;
+}
+
+/* 2. Track holding the images */
+.marquee-content {
+  display: flex;
+  gap: 20px; /* Space between images */
+  /* Adjust '30s' to make the scroll faster or slower */
+  animation: scrollContinuous 30s linear infinite; 
+}
+
+/* 3. Style individual images */
+.marquee-content img {
+  width: 350px; /* Match the size of the luxury portrait images */
+  height: 450px;
+  object-fit: cover;
+  border-radius: 4px; /* Subtle soft edges */
+  flex-shrink: 0; /* Stop images from compressing */
+}
+
+/* 4. Optional: Pause the scroll when the user hovers over it */
+/* .marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+} */
+
+/* 5. The Infinite Loop Animation */
+@keyframes scrollContinuous {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Moves the track left by half its total width (one full set of images) */
+    transform: translateX(-50%);
+  }
+}
+
+.mobile-about {
+    display: flex;
+    flex-direction: column; 
+    background-color: black;
+    width: 100%;
+    height: 550px;
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+.mobile-stack {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.mobile-black {
+    width: 670px;
+    height: 300px;
+    flex-shrink: 0;
+}
+
+.mobile-shoe {
+    width: 200px;
+    top: 20%;
+    left: 5%;
+    position: absolute;
+}
+
+.mobile-about h1 {
+    color: white;
+    padding-top: 20px;
+}
+
+.mobile-about p {
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.mobile-butt {
+    width: 100px;
+    height: 35px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 30px;
+    
+}
+
+.mobile-nest {
+    background-image: url(/love.png);
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.mobile-dream {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    flex-direction: column;
+}
+
+.mobile-dream p {
+    width: 620px;
+    padding-top: 7px;
+    padding-left: 9px;
+    color: gray;    
+}
+
+.mobile-star {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding-left: 500px;
+    padding-bottom: 30px;
+}
+
+.mobile-star img {
+    width: 100px;
+}
+
+.mobile-weddings {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    gap: 500px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+.wed-butt {
+    width: 50px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+}
+
+.mobile-parent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mobile-first {
+    display: flex;
+    gap: 20px;
+}
+
+.mobile-first img {
+    width: 300px;
+    height: 320px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+.mobile-second {
+    display: flex;
+    gap: 20px;
+}
+
+.mobile-second img {
+    width: 300px;
+    height: 320px;
+    border-radius: 24px;
+    object-fit: cover;  
+}
+
+.trust {
+    padding-top: 30px;
+    font-family: "inter", sans-serif;
+    font-size: 16px;
+}
+
+.logo-show {
+    overflow-x: hidden;
+  width: 100%;
+  white-space: nowrap;
+  display: flex;
+  background-color: #ffffff; /* Clean luxury background */
+  padding: 20px;
+  padding-top: 30px;
+}
+
+.logos {
+     display: flex;
+     align-items: center;
+  gap: 20px; /* Space between images */
+  /* Adjust '30s' to make the scroll faster or slower */
+  animation: scrollContinuous 60s linear infinite; 
+}
+
+.logos img {
+    width: 150px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.mobile-footer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.mobile-footer p {
+    font-family: "inter", sans-serif;
+    font-size: 13px;
+    padding-top: 5px;
+}
+
+.mob-con {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.mobile-footer img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.company {
+    padding-top: 10px;
+}
+
+.mobile-ref {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-ref a {
+    text-decoration: none;
+    color: #000000;
+    font-family: "inter", sans-serif;
+    font-size: 13px;
+    padding-top: 10px;
+
+}
+
+
+}
+
+
+@media screen and (max-width: 450px) {
+    .mobile {
+        padding-top: 3700px;
+    }
+
+     .mobile-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 800px;
+        width: 450px;
+        gap: 20px;
+        background-size: cover;
+    }
+
+    .mobile-header h1 {
+        width: 400px;
+        font-size: 30px;
+    }
+
+    .blank {
+        width: 400px;
+    }
+
+    .mobile-header p {
+        font-size: 13px;
+        font-family: "inter", sans-serif;
+    }
+
+    .mobile-main h1 {
+        font-size: 30px;
+    }
+
+    .mobile-main p {
+        font-size: 13px;
+    }
+
+    .marquee-content img {
+        width: 200px;
+        height: 380px;
+    }
+
+    .mobile-flower {
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .mob-flow {
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .mobile-hug {
+        width: 400px;
+    }
+
+    .mobile-section p {
+        width: 400px;
+    }
+
+    .mobile-black {
+        width: 400px;
+    }
+
+    .mobile-shoe {
+        width: 150px;
+        left: 2%;
+    }
+
+    .mobile-dream p {
+        width: 400px;
+    }
+
+    .mobile-star {
+        padding-left: 60px;
+    }
+
+    .mobile-weddings {
+        gap: 200px;
+        padding-top: 55px;
+        padding-left: 20px;
+    }
+
+    .mobile-first {
+        width: 450px;
+        padding-left: 20px;
+    }
+
+    .mobile-first img {
+        width: 200px;
+    }
+
+    .mobile-second {
+        padding-left: 20px;
+    }
+
+    .mobile-second img {
+        width: 200px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 320px) {
+
+
+    .mobile {
+        overflow-x: hidden;
+    }
+
+
+    .mobile-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 800px;
+        width: 320px;
+        gap: 20px;
+        padding-bottom: 30px;
+        
+    }
+
+    .blank {
+        width: 290px;
+    }
+
+    .mobile-header p {
+        font-size: 12px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .mobile-nav img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .mobile-header h1 {
+        width: 320px;
+    }
+
+    .marquee-container {
+        padding-bottom: 390px;
+        width: 320px;
+    }
+
+    .mobile-about {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .mob-flow {
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .mobile-flower {
+        width: 80%;
+    }
+
+    .mobile-hug {
+        width: 80%;
+    }
+
+    .mobile-known {
+        padding-top: 20px;
+    }
+
+    .mobile-known h1 {
+        font-size: 20px;
+    }
+
+    .mobile-section p {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .mobile-black {
+        width: 100%;
+    }
+
+    .mobile-dream p {
+        width: 100%;
+    }
+
+    .mobile-weddings {
+        padding-bottom: 20px;
+        gap: 90px;
+    }
+
+    .mobile-parent {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .mobile-first {
+        width: 320px;
+        gap: 15px;
+    }
+
+    .mobile-second {
+        gap: 15px;
+    }
+
+    .logo-show {
+        width: 100%;
+        overflow: visible;
+    }
+
+
+    .mobile-first img {
+        width: 135px;
+    }
+
+    .mobile-second img {
+        width: 135px;
+    }
+
+}
+
+
+
+
+
