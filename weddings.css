@@ -563,6 +563,7 @@ footer {
         padding-left: 40px;
         background-position: 20PX 40PX ;
         overflow: hidden;
+        padding-bottom: 20px;
         z-index: 3;
     }
 
@@ -645,9 +646,91 @@ footer {
     transition: transform 0.4s ease;
 }
 
-.etal h1 {
-    color: black;
-    z-index: 100;
+.etal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-right: 30px;
+    height: 250px;
+    background-color: rgb(24, 26, 25);
 }
+
+.etal h1 {
+    padding-top: 15px;
+    color: rgb(208, 175, 154);
+    font-family: "corinthia", sans-serif;
+}
+
+.etal h5 {
+    color: rgb(208, 175, 154);
+}
+
+.etal p {
+    width: 350px;
+    padding-top: 15px;
+    font-family: "inter", sans-serif;
+    line-height: 23px;
+    padding-bottom: 15px;
+    text-align: center;    
+    color: white;
+}
+
+.etal button {
+    height: 40px;
+    width: 100px;
+    border: 1px solid rgb(208, 175, 154);
+    color: rgb(208, 175, 154);
+    background-color: transparent;
+}
+
+.mobile-footer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.mobile-footer p {
+    font-family: "inter", sans-serif;
+    font-size: 13px;
+    padding-top: 5px;
+}
+
+.mob-con {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.mobile-footer img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.company {
+    padding-top: 10px;
+}
+
+.mobile-ref {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-ref a {
+    text-decoration: none;
+    color: #000000;
+    font-family: "inter", sans-serif;
+    font-size: 13px;
+    padding-top: 10px;
+
+}
+
+
+
+
+
+
+
 }
   
