@@ -1225,10 +1225,12 @@ footer {
 .logos {
      display: flex;
      align-items: center;
-  gap: 20px; /* Space between images */
+  gap: 10px; /* Space between images */
   /* Adjust '30s' to make the scroll faster or slower */
-  animation: scrollContinuous 60s linear infinite; 
+  animation: scrollContinuous 30s linear infinite; 
 }
+
+
 
 .logos img {
     width: 150px;

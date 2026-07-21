@@ -33,4 +33,16 @@ const observer = new IntersectionObserver((entries) => {
   document.querySelectorAll('.card-image').forEach((el) => observer.observe(el));
   
 
+  let show = document.getElementById("show");
+  let open = document.getElementById("open");
+  let close = document.getElementById("close");
+
+  open.addEventListener("click", function(){
+    show.style.display = "block";
+  })
+
+  close.addEventListener("click", function(){
+    show.style.display = "none";
+  })
+
 
