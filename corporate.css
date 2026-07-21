@@ -529,5 +529,20 @@ footer {
     padding-top: 20px;
 }
 
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 450px) {
+    .desktop {
+        display: none;
+    }
+
+    
+    
+
+    
+}
+
 
 
