@@ -564,8 +564,8 @@ footer {
         background-repeat: no-repeat;
         background-size: 410PX 400px;
         padding-top: 80px;
-        padding-left: 20px;
-        background-position: 20PX 40PX 20px ;
+        padding-left: 15px;
+        background-position: 20PX 40PX 5px ;
         /* overflow: hidden; */
         padding-bottom: 20px;
         z-index: 3;
