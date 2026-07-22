@@ -119,4 +119,4 @@ setInterval(() => {
     }
 
     showMobileImage();
-}, `2000`);
+}, `4000`);
