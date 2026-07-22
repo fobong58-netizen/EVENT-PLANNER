@@ -476,7 +476,7 @@ footer {
         background-image: url(/wedding-background.png);
         background-attachment: fixed;
         height: 250px;
-        width: 450px;
+        width: 100%;
     }
 
     .mobile-header h1 {
@@ -489,12 +489,13 @@ footer {
     .mobile-nav {
         display: flex;
         position: fixed;
-        gap: 350px;
+        justify-content: space-between;
         background-color: rgba(128, 128, 128, 0.361);
         align-items: center;
         height: 60px;
-        width: 450px;
+        width: 100%;
         padding-left: 10px;
+        padding-right: 20px;
         z-index: 100;
     }
 
@@ -546,9 +547,11 @@ footer {
     .top {
         padding-top: 8px;
         padding-left: 10px;
+        padding-right: 10px;
         display: flex;
-        gap: 360px;
+        justify-content: space-between;
         align-items: center;
+        width: 100%;
     }
 
     .close {
@@ -595,12 +598,13 @@ footer {
     }
 
     .pic {
-        width: 450px;
+        width: 100%;
         padding-top: 20px;
     }
 
     .mob-img {
         position: relative;
+        width: 100%;
     }
 
     /* .mob-img2 {
@@ -616,18 +620,18 @@ footer {
     } */
 
     .pic1 {
-        width: 370px;
+        width: 100%;
     }
 
     .pic2 {
-        width: 370px;
+        width: 100%;
     }
 
     .text-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 370px;
+    width: 100%;
     height: 60%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
     display: flex;
@@ -654,7 +658,7 @@ footer {
     text-align: center;
     padding-right: 30px;
     height: 250px;
-    width: 450px;
+    width: 100%;
     background-color: rgb(24, 26, 25);
 }
 
@@ -869,4 +873,3 @@ footer {
     }
     
 }
-  
