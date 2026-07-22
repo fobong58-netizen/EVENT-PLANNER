@@ -929,14 +929,7 @@ footer {
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
-.nav-menu-logo {
-    align-self: flex-start;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-}
+
 
 /* ==========================================================================
    6. DROPDOWN MENU ACTIVE STATE (Unrolls top-to-bottom & fades in when clicked)
