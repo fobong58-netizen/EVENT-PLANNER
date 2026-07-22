@@ -794,18 +794,39 @@ footer {
 
 
 
+/* ============================================================
+   FLUID MOBILE STYLES
+   Replaces your three separate breakpoints
+   (max-width:768px / 450px / 320px) with ONE rule set that
+   scales to any phone width instead of jumping between
+   fixed-pixel snapshots.
+
+   Core techniques used:
+   - width: 100% / max-width: 100% instead of fixed px widths,
+     so nothing can ever be wider than the screen.
+   - clamp(min, preferred, max) for font sizes and a few
+     "wants to be big but must shrink" widths — it scales
+     smoothly with viewport width between the min/max.
+   - box-sizing: border-box (you already have this globally)
+     so padding never adds extra overflow width.
+
+   Drop this in to REPLACE your existing
+   @media (max-width: 768px) / 450px / 320px blocks.
+   Keep everything outside those blocks (desktop styles,
+   .mobile { display:none } base rule, etc.) as-is.
+   ============================================================ */
 
 @media screen and (max-width: 768px) {
-    body{
+
+    body {
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: flex-start; /* not "center" — see earlier fix */
         flex-direction: column;
+        min-height: 100vh;           /* not a fixed height:100vh */
     }
-    
-    .desktop {
-        display: none;
-    }
+
+    .desktop { display: none; }
 
     .mobile {
         display: flex;
@@ -814,8 +835,10 @@ footer {
         flex-direction: column;
         width: 100%;
         height: fit-content;
+        overflow-x: hidden;
     }
 
+    /* ---------- Header / hero ---------- */
     .mobile-header {
         display: flex;
         align-items: center;
@@ -825,717 +848,168 @@ footer {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        height: 800px;
         width: 100%;
+        min-height: clamp(500px, 90vh, 800px);
+        padding: 90px 20px 40px;      /* room for the fixed nav + breathing room */
+        box-sizing: border-box;
         gap: 20px;
-    }
-    
-   /* ==========================================================================
-   1. NAVIGATION CONTAINER & LOGO
-   ========================================================================== */
-.mobile-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 100%;
-    height: 60px;
-    background-color: #11111145; /* Dark theme match */
-    color: #fff;
-    z-index: 100;
-    box-sizing: border-box;
-}
-
-.mobile-nav:has(.nav-menu.active) {
-    background-color: #000; /* Solid black while the menu is open, matching the dropdown */
-}
-
-/* ==========================================================================
-   2. HAMBURGER BUTTON (Outer Wrapper)
-   ========================================================================== */
-.menu-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 16px; /* Height determines the spacing between the 2 lines */
-    padding: 0;
-    position: relative;
-    z-index: 101;
-}
-
-/* ==========================================================================
-   3. HAMBURGER LINES (Default Closed State - Parallel Lines)
-   ========================================================================== */
-.ham-line {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-    opacity: 1;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    transform-origin: center; /* Crucial for rotating cleanly from the middle */
-}
-
-/* Ensure lines start perfectly flat on page load */
-.ham-line-1 {
-    transform: translateY(0) rotate(0deg);
-}
-
-.ham-line-2 {
-    transform: translateY(0) rotate(0deg);
-}
-
-/* ==========================================================================
-   4. ACTIVE STATE (When clicked, form a clean "X")
-   ========================================================================== */
-/* Move line 1 down to the middle and spin it 45 degrees */
-.menu-toggle.active .ham-line-1 {
-    transform: translateY(7px) rotate(45deg); 
-} 
-
-/* Move line 2 up to the middle and spin it -45 degrees */
-.menu-toggle.active .ham-line-2 {
-    transform: translateY(-7px) rotate(-45deg);
-}
-
-/* ==========================================================================
-   5. DROPDOWN MENU (Default Closed State - Completely Hidden)
-   ========================================================================== */
-.nav-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    display: flex; /* Keep flex layout but hide it visually */
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 40px 0;
-    
-    /* --- KEY FIXES FOR HIDING --- */
-    opacity: 0;
-    visibility: hidden; /* This completely hides the menu on page load */
-    transform: scaleY(0);
-    transform-origin: top; /* Grows downward from the nav bar, like a curtain unrolling */
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-}
-
-
-/* ==========================================================================
-   6. DROPDOWN MENU ACTIVE STATE (Unrolls top-to-bottom & fades in when clicked)
-   ========================================================================== */
-.nav-menu.active {
-    opacity: 1;
-    visibility: visible; /* Makes it interactive and visible */
-    transform: scaleY(1); /* Unrolls down to full height */
-}
-
-/* Links Styling */
-.nav-menu a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    transition: color 0.2s;
-}
-
-.nav-menu a:hover {
-    color: #c5a880; /* Gold/champagne hover */
-}
-
-
-    .nav-menu a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.2rem;
-        letter-spacing: 1px;
-        transition: color 0.2s;
-    }
-
-    .nav-menu a:hover {
-        color: #c5a880; /* Subtle gold/champagne hover color */
-    }
-
-    .nav-menu.active {
-        opacity: 1;
-        visibility: visible;
-        transform: scaleY(1);
-    }
-
-
-
-    .mobile-nav img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
+        text-align: center;
     }
 
     .mobile-header h1 {
-        width: 600px;
-        text-align: center;
+        width: 100%;
+        max-width: 600px;
+        font-size: clamp(24px, 6vw, 46px);
         color: white;
-        padding-top: 75px;
-        font-size: 46px;
     }
 
     .blank {
-        width: 500px;
+        width: min(90%, 500px);
         height: 1px;
         border: 1px solid white;
     }
 
     .mobile-header p {
-        color: white;
-        font-size: 20px;
-    }
-
-    .mobile-main {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-top: 30px;
-        height: 650px;
-    }
-
-    .mobile-flower {
-        width: 100%;
-        max-width: 700px;
-        height: 300px;
-        object-fit: cover;
-    }
-
-    .mobile-hug {
-        width: 100%;
-        max-width: 700px;
-        height: 300px;
-        object-fit: cover;
-    }
-
-    .mobile-section {
-        display: flex;
-        flex-direction: column;
-        padding-top: 150px;
-        padding-left: 30px;
-        width: 100%;
-    }
-
-    .mobile-known {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .mobile-known h1 {
-        font-weight: 300;
-    }
-
-    .mobile-section p {
         width: 100%;
         max-width: 500px;
-        padding-top: 15px;
+        font-size: clamp(12px, 3.2vw, 20px);
+        color: white;
         font-family: "inter", sans-serif;
-        font-size: 14px;
+        padding: 0 10px;
+        box-sizing: border-box;
     }
 
-    /* 1. Hide the horizontal scrollbar */
-.marquee-container {
-  overflow: hidden;
-  width: 100%;
-  white-space: nowrap;
-  display: flex;
-  background-color: #ffffff; /* Clean luxury background */
-  padding: 20px 0;
-}
+    /* ---------- Nav ---------- */
+    .mobile-nav img {
+        width: clamp(44px, 12vw, 60px);
+        height: clamp(44px, 12vw, 60px);
+        border-radius: 50%;
+    }
 
-/* 2. Track holding the images */
-.marquee-content {
-  display: flex;
-  gap: 20px; /* Space between images */
-  /* Adjust '30s' to make the scroll faster or slower */
-  animation: scrollContinuous 30s linear infinite; 
-}
-
-/* 3. Style individual images */
-.marquee-content img {
-  width: 350px; /* Match the size of the luxury portrait images */
-  height: 450px;
-  object-fit: cover;
-  border-radius: 4px; /* Subtle soft edges */
-  flex-shrink: 0; /* Stop images from compressing */
-}
-
-/* 4. Optional: Pause the scroll when the user hovers over it */
-/* .marquee-container:hover .marquee-content {
-  animation-play-state: paused;
-} */
-
-/* 5. The Infinite Loop Animation */
-@keyframes scrollContinuous {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    /* Moves the track left by half its total width (one full set of images) */
-    transform: translateX(-50%);
-  }
-}
-
-.mobile-about {
-    display: flex;
-    flex-direction: column; 
-    background-color: black;
-    width: 100%;
-    height: 550px;
-    padding-left: 20px;
-    padding-top: 15px;
-}
-
-.mobile-stack {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.mobile-black {
-    width: 100%;
-    max-width: 670px;
-    height: 300px;
-    flex-shrink: 0;
-}
-
-.mobile-shoe {
-    width: 200px;
-    top: 20%;
-    left: 5%;
-    position: absolute;
-}
-
-.mobile-about h1 {
-    color: white;
-    padding-top: 20px;
-}
-
-.mobile-about p {
-    color: white;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.mobile-butt {
-    width: 100px;
-    height: 35px;
-    color: white;
-    background-color: black;
-    border: 1px solid white;
-    border-radius: 30px;
-    
-}
-
-.mobile-nest {
-    background-image: url(love.png);
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-}
-
-.mobile-dream {
-    display: flex;
-    width: 100%;
-    height: 400px;
-    flex-direction: column;
-}
-
-.mobile-dream p {
-    width: 100%;
-    max-width: 620px;
-    padding-top: 7px;
-    padding-left: 9px;
-    color: gray;    
-}
-
-.mobile-star {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-end;
-    padding-right: 20px;
-    padding-bottom: 30px;
-}
-
-.mobile-star img {
-    width: 100px;
-}
-
-.mobile-weddings {
-    display: flex;
-    width: 100%;
-    height: 150px;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 30px;
-    box-sizing: border-box;
-}
-
-.wed-butt {
-    width: 50px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: #000000;
-    color: white;
-    border: none;
-}
-
-.mobile-parent {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.mobile-first {
-    display: flex;
-    gap: 15px;
-}
-
-.mobile-first img {
-    width: 280px;
-    height: 300px;
-    border-radius: 24px;
-    object-fit: cover;
-}
-
-.mobile-second {
-    display: flex;
-    gap: 20px;
-}
-
-.mobile-second img {
-    width: 280px;
-    height: 300px;
-    border-radius: 24px;
-    object-fit: cover;  
-}
-
-.trust {
-    padding-top: 30px;
-    font-family: "inter", sans-serif;
-    font-size: 16px;
-}
-
-.logo-show {
-    overflow-x: hidden;
-  width: 100%;
-  white-space: nowrap;
-  display: flex;
-  background-color: #ffffff; /* Clean luxury background */
-  padding: 20px;
-  padding-top: 30px;
-}
-
-.logos {
-     display: flex;
-     align-items: center;
-  gap: 10px; /* Space between images */
-  /* Adjust '30s' to make the scroll faster or slower */
-  animation: scrollContinuous 30s linear infinite; 
-}
-
-
-
-.logos img {
-    width: 150px;
-    height: 50px;
-    object-fit: contain;
-}
-
-.mobile-footer {
-    display: flex;
-    flex-direction: column;
-    padding-top: 60px;
-    text-align: center;
-}
-
-.mobile-footer p {
-    font-family: "inter", sans-serif;
-    font-size: 13px;
-    padding-top: 5px;
-}
-
-.mob-con {
-    width: 100%;
-    padding-left: 10px;
-}
-
-.mobile-footer img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-}
-
-.company {
-    padding-top: 10px;
-}
-
-.mobile-ref {
-    display: flex;
-    flex-direction: column;
-}
-
-.mobile-ref a {
-    text-decoration: none;
-    color: #000000;
-    font-family: "inter", sans-serif;
-    font-size: 13px;
-    padding-top: 10px;
-
-}
-
-
-}
-
-
-@media screen and (max-width: 450px) {
-
-     .mobile-header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background-attachment: scroll;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        height: 800px;
+    /* ---------- Intro / flowers ---------- */
+    .mobile-main {
         width: 100%;
-        gap: 20px;
+        padding: 20px;
+        box-sizing: border-box;
     }
 
-    .mobile-header h1 {
-        width: 400px;
-        font-size: 30px;
-    }
-
-    .blank {
-        width: 400px;
-    }
-
-    .mobile-header p {
-        font-size: 13px;
-        font-family: "inter", sans-serif;
-    }
-
-    .mobile-main h1 {
-        font-size: 30px;
-    }
-
-    .mobile-main p {
-        font-size: 13px;
-    }
-
-    .marquee-content img {
-        width: 200px;
-        height: 380px;
-    }
-
-    .mobile-flower {
-        width: 400px;
-        height: 300px;
-        object-fit: cover;
-    }
+    .mobile-main h1 { font-size: clamp(24px, 6vw, 30px); }
+    .mobile-main p  { font-size: clamp(12px, 3.2vw, 14px); }
 
     .mob-flow {
         width: 100%;
-        padding-left: 20px;
+        padding: 0 20px;
+        box-sizing: border-box;
     }
 
+    .mobile-flower,
     .mobile-hug {
-        width: 400px;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        object-fit: cover;
     }
 
-    .mobile-section{
+    /* ---------- "What we're known for" ---------- */
+    .mobile-section {
         width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
     }
 
     .mobile-section p {
-        width: 350px;
+        width: 100%;
+        max-width: 350px;
+        font-size: clamp(13px, 3.5vw, 15px);
     }
 
+    /* ---------- Marquee ---------- */
+    .marquee-content img {
+        width: clamp(140px, 45vw, 200px);
+        height: clamp(260px, 70vw, 380px);
+        object-fit: cover;
+    }
+
+    /* ---------- About section ---------- */
     .mobile-black {
-        width: 400px;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        aspect-ratio: 4 / 3;
     }
 
     .mobile-shoe {
-        width: 150px;
-        left: 2%;
+        width: clamp(120px, 35vw, 200px);
+        top: 15%;
+        left: 4%;
+        position: absolute;
+    }
+
+    /* ---------- Testimonial ---------- */
+    .mobile-dream {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        height: auto;
     }
 
     .mobile-dream p {
-        width: 360px;
+        width: 100%;
+        max-width: 100%;
+        padding-top: 7px;
     }
 
-    .mobile-star {
-        padding-left: 60px;
-    }
+    .mobile-star { padding-right: 20px; padding-left: 20px; }
 
-    .mobile-weddings {
-        padding-top: 55px;
-    }
+    /* ---------- Weddings grid ---------- */
+    .mobile-weddings { padding: 30px 20px; }
 
     .mobile-parent {
         width: 100%;
-        padding-left: 20px;
+        padding: 0 20px;
         box-sizing: border-box;
+        gap: 15px;
     }
 
-    .mobile-first {
-        width: 100%;
-        padding-left: 20px;
-        box-sizing: border-box;
-    }
-
-    .mobile-first img {
-        width: 180px;
-    }
-
+    .mobile-first,
     .mobile-second {
-        padding-left: 20px;
-    }
-
-    .mobile-second img {
-        width: 180px;
-    }
-
-
-}
-
-
-@media screen and (max-width: 320px) {
-
-
-    .mobile {
-        overflow-x: hidden;
-    }
-
-
-    .mobile-header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background-attachment: scroll;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        height: 800px;
-        width: 100%;
-        gap: 20px;
-        padding-bottom: 30px;
-        
-    }
-
-    .blank {
-        width: 290px;
-    }
-
-    .mobile-header p {
-        font-size: 12px;
-        padding-bottom: 10px;
-        padding-left: 10px;
-    }
-
-    .mobile-nav img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .mobile-header h1 {
-        width: 100%;
-    }
-
-    .marquee-container {
-        padding-bottom: 390px;
-        width: 100%;
-    }
-
-    .mobile-about {
-        padding-top: 30px;
-        padding-bottom: 20px;
-    }
-
-    .mob-flow {
-        width: 100%;
-        padding-left: 0px;
-    }
-
-    .mobile-flower {
-        width: 80%;
-    }
-
-    .mobile-hug {
-        width: 80%;
-    }
-
-    .mobile-known {
-        padding-top: 20px;
-    }
-
-    .mobile-known h1 {
-        font-size: 20px;
-    }
-
-    .mobile-section p {
-        width: 90%;
-        font-size: 14px;
-    }
-
-    .mobile-black {
-        width: 100%;
-    }
-
-    .mobile-dream p {
-        width: 100%;
-    }
-
-    .mobile-weddings {
-        padding-bottom: 20px;
-    }
-
-    .mobile-parent {
         width: 100%;
         gap: 15px;
     }
 
-    .mobile-first {
-        width: 100%;
-        gap: 10px;
-    }
-
-    .mobile-second {
-        gap: 10px;
-    }
-
-    .logo-show {
-        width: 100%;
-        overflow: visible;
-    }
-
-
-    .mobile-first img {
-        width: 100px;
-    }
-
+    .mobile-first img,
     .mobile-second img {
-        width: 100px;
+        width: calc(50% - 8px);   /* two per row, always fits */
+        height: clamp(180px, 40vw, 300px);
+        border-radius: 16px;
+        object-fit: cover;
+        flex: none;
     }
 
+    /* ---------- Logo marquee ---------- */
+    .logo-show { width: 100%; padding: 20px; }
+    .logos img {
+        width: clamp(90px, 25vw, 150px);
+        height: auto;
+    }
+
+    /* ---------- Footer ---------- */
+    .mobile-footer {
+        width: 100%;
+        padding: 40px 20px 20px;
+        box-sizing: border-box;
+    }
+
+    .mobile-footer p { font-size: 13px; }
+    .mobile-footer img { width: 70px; height: 70px; }
+
+    .mobile-ref a { font-size: 13px; }
 }
+
+/* No separate 450px/320px tiers needed — clamp() and %
+   already scale down smoothly to the smallest phones
+   (iPhone SE at 320–375px included). If you find one
+   specific element still overflowing on a very narrow
+   device, the fix is always the same pattern: swap its
+   fixed px width for `width: 100%; max-width: <original px>;`
+   or wrap the number in clamp(). */
