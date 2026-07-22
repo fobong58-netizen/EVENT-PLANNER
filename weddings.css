@@ -492,7 +492,7 @@ footer {
         background-color: rgba(128, 128, 128, 0.361);
         align-items: center;
         height: 60px;
-        width: 100%;
+        width: 450px;
         padding-left: 10px;
         z-index: 100;
     }
@@ -738,6 +738,7 @@ footer {
 
     .mobile-nav {
         gap: 250px;
+        width: 360px;
     }
 
     .top {
@@ -791,6 +792,7 @@ footer {
 
     .mobile-nav {
         gap: 270px;
+        width: 320px;
     }
 
     .top {
