@@ -807,7 +807,7 @@ footer {
     }
 
     .mobile {
-        padding-top: 500%;
+        padding-top: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -824,11 +824,10 @@ footer {
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: cover;
+        background-size: contain;
         height: 800px;
         width: 100%;
         gap: 20px;
-        background-size: cover;
     }
     
    /* ==========================================================================
@@ -1297,11 +1296,10 @@ footer {
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: cover;
+        background-size: contain;
         height: 800px;
         width: 450px;
         gap: 20px;
-        background-size: cover;
     }
 
     .mobile-header h1 {
@@ -1410,7 +1408,7 @@ footer {
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: cover;
+        background-size: contain;
         height: 800px;
         width: 320px;
         gap: 20px;
