@@ -1,3 +1,10 @@
+// Force every page load/reload to start at the very top,
+// instead of the browser restoring your last scroll position
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
 const images = [
     `/background1.jpg`,
     `/background2.jpg`,
@@ -119,4 +126,4 @@ setInterval(() => {
     }
 
     showMobileImage();
-}, `4000`);
+}, `5500`);
