@@ -645,6 +645,7 @@ footer {
 
     .mobile-nav {
         display: flex;
+        position: fixed;
         background-color: gray;
         align-items: center;
         gap: 340px;
@@ -656,11 +657,11 @@ footer {
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding-top: 20px;
+        padding-top: 70px;
         width: 100%;
         height: 750px;
         background-color: black;
-        position: relative; 
+        position: fixed; 
         z-index: 101;
         margin-top: -67px;
     }
@@ -692,7 +693,7 @@ footer {
     .top {
         padding-left: 10px;
         display: flex;
-        gap: 345px;
+        gap: 350px;
         align-items: center;
     }
 
@@ -721,7 +722,7 @@ footer {
     .moment {
         width: 320px;
         padding-top: 10px;
-        padding-left: 130px;
+        padding-left: 60px;
         font-family: "inter", sans-serif;
         text-align: center;
         font-size:  39px;
@@ -730,7 +731,7 @@ footer {
     .sun {
         width: 430px;
         text-align: center;
-        padding-left: 40px;
+        padding-left: 0px;
     }
 
     .pad {
@@ -1041,18 +1042,21 @@ footer {
         padding-top: 10px;
     }
 
+}
 
+@media screen and (max-width: 320px) {
 
+    .mobile-header {
+        max-width: 320px;
+    }
 
+    .top {
+        gap: 100px;
+    }
 
-
-
-
-
-
-
-
-
+    .sun {
+        width: 320px;
+    }
     
 }
 

@@ -807,7 +807,6 @@ footer {
     }
 
     .mobile {
-        padding-left: 15px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -835,7 +834,7 @@ footer {
    ========================================================================== */
 .mobile-nav {
     display: flex;
-    justify-content: space-between;
+    gap: 620px;
     align-items: center;
     padding-bottom: 80px;
     width: 100%;
@@ -1179,17 +1178,17 @@ footer {
 .mobile-parent {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .mobile-first {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .mobile-first img {
-    width: 300px;
-    height: 320px;
+    width: 280px;
+    height: 300px;
     border-radius: 24px;
     object-fit: cover;
 }
@@ -1200,8 +1199,8 @@ footer {
 }
 
 .mobile-second img {
-    width: 300px;
-    height: 320px;
+    width: 280px;
+    height: 300px;
     border-radius: 24px;
     object-fit: cover;  
 }
@@ -1303,6 +1302,10 @@ footer {
         gap: 20px;
     }
 
+    .mobile-nav {
+        gap: 325px;
+    }
+
     .mobile-header h1 {
         width: 400px;
         font-size: 30px;
@@ -1345,8 +1348,12 @@ footer {
         width: 400px;
     }
 
+    .mobile-section{
+        width: 450px;
+    }
+
     .mobile-section p {
-        width: 400px;
+        width: 350px;
     }
 
     .mobile-black {
@@ -1359,7 +1366,7 @@ footer {
     }
 
     .mobile-dream p {
-        width: 400px;
+        width: 360px;
     }
 
     .mobile-star {
@@ -1367,9 +1374,14 @@ footer {
     }
 
     .mobile-weddings {
-        gap: 200px;
+        gap: 140px;
         padding-top: 55px;
         padding-left: 20px;
+    }
+
+    .mobile-parent {
+        width: 450px;
+        padding-left: 40px;
     }
 
     .mobile-first {
@@ -1378,7 +1390,7 @@ footer {
     }
 
     .mobile-first img {
-        width: 200px;
+        width: 150px;
     }
 
     .mobile-second {
@@ -1386,7 +1398,7 @@ footer {
     }
 
     .mobile-second img {
-        width: 200px;
+        width: 150px;
     }
 
 
@@ -1492,11 +1504,11 @@ footer {
 
     .mobile-first {
         width: 320px;
-        gap: 15px;
+        gap: 10px;
     }
 
     .mobile-second {
-        gap: 15px;
+        gap: 10px;
     }
 
     .logo-show {
@@ -1506,11 +1518,11 @@ footer {
 
 
     .mobile-first img {
-        width: 135px;
+        width: 100px;
     }
 
     .mobile-second img {
-        width: 135px;
+        width: 100px;
     }
 
 }

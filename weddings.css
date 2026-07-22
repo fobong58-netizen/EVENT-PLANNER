@@ -515,7 +515,7 @@ footer {
         width: 100%;
         height: 100vh;
         background-color: black;
-        position: sticky; 
+        position: fixed; 
         z-index: 101;
     }
 
@@ -562,7 +562,7 @@ footer {
         padding-top: 80px;
         padding-left: 40px;
         background-position: 20PX 40PX ;
-        overflow: hidden;
+        /* overflow: hidden; */
         padding-bottom: 20px;
         z-index: 3;
     }
@@ -728,18 +728,68 @@ footer {
 
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
 
     .mobile-header {
-        width: 100%;
+        background-size: cover;
     }
 
     .mobile-nav {
-        gap: 220px;
+        gap: 250px;
     }
 
-    .show {
-        max-width: 320px;
+    .top {
+        gap: 250px;
+    }
+
+    .mobile-main {
+        width: 360px;
+        background-size: 339px 300px;
+        background-position: 10px 10px;
+        padding-left: 15px;
+    }
+
+    .pic {
+        width: 360px;
+        padding-right: 10px;
+    }
+
+    .mob-img {
+        width: 360px;
+    }
+
+    .text-overlay {
+        width: 330px;
+    }
+
+    .tt {
+        font-size: 23px;
+    }
+
+    .pic1 {
+        width: 330px;
+    }
+
+    .pic2 {
+        width: 330px;
+    }
+
+    .etal p {
+        font-size: 14px;
+        padding-left: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 320px) {
+
+
+    .mobile-nav {
+        gap: 270px;
+    }
+
+    .top {
+        gap: 390px;
     }
 
     .top {
@@ -747,21 +797,31 @@ footer {
     }
 
     .mobile-main {
-        width: 100%;
-        background-size: 290px 400px;
-        padding-left: 26px;
+        width: 320px;
+        background-size: 316px 400px;
+        background-position: 20px 10px;
+        padding-left: 23px;
     }
 
     .mobile-main h2 {
         font-size: 18px;
+        padding-left: 8px;
     }
 
     .mobile-main h1 {
         font-size: 18px;
+        padding-left: 8px;
     }
     .every {
         font-size: 12px;
         width: 280px;
+        padding-left: 8px;
+    }
+
+    .cis {
+        padding-left: 8px;
+        padding-top: 5px;
+        font-family: "corinthia", cursive;
     }
 
     .cis {
@@ -773,19 +833,19 @@ footer {
     }
 
     .mob-img {
-        width: 280px;
+        width: 320px;
     }
 
     .pic1 {
-        width: 100%;
+        width: 300px;
     }
 
     .text-overlay {
-        width: 100%;
+        width: 300px;
     }
 
     .pic2 {
-        width: 100%;
+        width: 300px;
     }
 
     .etal {
