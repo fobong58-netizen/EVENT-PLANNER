@@ -824,7 +824,7 @@ footer {
         background-attachment: scroll;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain;
+        background-size: cover;
         height: 800px;
         width: 100%;
         gap: 20px;
@@ -1296,7 +1296,7 @@ footer {
         background-attachment: scroll;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain;
+        background-size: cover;
         height: 800px;
         width: 450px;
         gap: 20px;
@@ -1408,7 +1408,7 @@ footer {
         background-attachment: scroll;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain;
+        background-size: cover;
         height: 800px;
         width: 320px;
         gap: 20px;
