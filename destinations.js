@@ -58,3 +58,16 @@ const obs = new IntersectionObserver((entries) => {
 
   // Tell the observer to watch all elements with the 'reveal' class
   document.querySelectorAll('nav').forEach((el) => obs.observe(el));
+
+
+  let show = document.getElementById("show");
+  let open = document.getElementById("open");
+  let close = document.getElementById("close");
+
+  open.addEventListener("click", function(){
+    show.style.display = "block";
+  })
+
+  close.addEventListener("click", function(){
+    show.style.display = "none";
+  })

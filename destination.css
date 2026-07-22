@@ -612,4 +612,448 @@ footer {
     padding-top: 20px;
 }
 
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 450px) {
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .mobile-header {
+        display: flex;
+        flex-direction: column;
+        background-image: url(/wedding-background.png);
+        height: 250px;
+    }
+
+    .mobile-header h1 {
+        padding-top: 60px;
+        padding-left: 90px;
+        width: 350px;
+        text-align: center;
+        color: white;
+    }
+
+    .mobile-nav {
+        display: flex;
+        background-color: gray;
+        align-items: center;
+        gap: 340px;
+        height: 60px;
+        padding-left: 10px;
+    }
+
+    .show {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 20px;
+        width: 100%;
+        height: 750px;
+        background-color: black;
+        position: relative; 
+        z-index: 101;
+        margin-top: -67px;
+    }
+
+    .ham {
+        width: 100%;
+        height: 500px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .show {
+        display: none;
+    }
+
+    .show a {
+        text-decoration: none;
+        color: white;
+        padding-top: 20px;
+        font-size: 18px;
+        font-family: "inter", sans-serif;
+    }
+
+    .show a:hover {
+        color: goldenrod;
+    }
+
+    .top {
+        padding-left: 10px;
+        display: flex;
+        gap: 345px;
+        align-items: center;
+    }
+
+    .mobile-log {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .close {
+        height: 20px;
+        width: 20px;
+    }
+
+    .m-logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .m-ham {
+        height: 20px;
+        width: 30px;
+    }
+
+    .moment {
+        width: 320px;
+        padding-top: 10px;
+        padding-left: 130px;
+        font-family: "inter", sans-serif;
+        text-align: center;
+        font-size:  39px;
+    }
+
+    .sun {
+        width: 430px;
+        text-align: center;
+        padding-left: 40px;
+    }
+
+    .pad {
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    .des {
+        width: 380px;
+        border-radius: 15px;
+    }
+
+    .mob-nest {
+        width: 100%;
+        padding-left: 30px;
+        padding-top: 20px;
+        height: 150px;
+    }
+
+    .any {
+        display: flex;
+        flex-direction: column;
+        background-color: #000000;
+        border-radius: 15px;
+        width: 380px;
+        height: 145px;
+    }
+
+    .any h2 {
+        padding-left: 10px;
+        padding-top: 4px;
+        font-family: "inter", sans-serif;
+        font-size: 19px;
+        color: white;
+    }
+
+    .any p {
+        padding-top: 40px;
+        padding-left: 10px;
+        font-family: "inter", sans-serif;
+        font-size: 15px;
+        color: white;
+    }
+
+    .pad1 {
+        padding-top: 30px;
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    .beach1 {
+        width: 380px;
+        border-radius: 15px;
+    }
+
+    .from-nest {
+        width: 100%;
+        padding-left: 30px;
+        padding-top: 15px;
+    }
+
+    .from {
+        border-radius: 15px;
+        background-color: #000000;
+        color: white;
+        height: 100px;
+        width: 380px;
+    }
+
+    .from p {
+        width: 330px;
+        font-size: 18px;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    .mobile-main {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .mobile-main h2 {
+        padding-left: 30px;
+    }
+
+    .mobile-main p {
+        text-align: center;
+        width: 380px;
+        padding-left: 35px;
+        padding-top: 10px;
+    }
+
+    .m-vow {
+        width: 380px;
+        border-radius: 30px 0px 30px 0px;
+    }
+
+    .next {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    .next h2 {
+        padding-left: 50px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+
+    .next p {
+        width: 380px;
+        padding-bottom: 15px;
+    }
+
+    .next img {
+        width: 380px;
+        border-radius: 30px 0px 30px 0px;
+    }
+
+    .mobile-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 30px;
+        height: 800px;
+        background-color:  rgb(237, 237, 237);
+    }
+
+    .house1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 20px;
+        gap: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .house1 h1 {
+        font-family: "inter", sans-serif;
+        font-weight: 400;
+    }
+
+    .house1 h5 {
+        font-size: 17px;
+        font-family: "inter", sans-serif;
+        color: gray;
+    }
+
+    .m-butt {
+        width: 100px;
+        height: 30px;
+        border: none;
+        border-radius: 30px;
+        color: white;
+        background-color: #000000;   
+    }
+
+    .m-butt:hover {
+        transform: scale(1.1);
+    }
+
+    .nest-mid {
+        width: 100%;
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+
+    .mid-vow {
+        width: 400px;
+    }
+
+    .house2 {
+        display: flex;
+        gap: 15px;
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .l-vow1 {
+        width: 200px;
+        object-fit: cover;
+    }
+
+    .house3 {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .l-vow2 {
+        width: 185px;
+        object-fit: cover;
+    }
+
+    .mob-section2 {
+        width: 100%;
+        height: 750px;
+        background-color: rgba(240, 255, 255, 0.493);
+    }
+
+    .contain {
+        padding-left: 20px;
+        height: 400px;
+    }
+
+    .container {
+        position: relative;
+        width: 380px;
+        height: 300px;
+        background-color: #1a1c1e;
+        color: #ffffff;
+        padding: 60px 40px;
+        border-radius: 40px;
+        text-align: center;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .container h1 {
+        font-size: 24px;
+    }
+
+    .container p {
+        font-size: 20px;
+        padding-top: 20px;
+        font-family: "inter", sans-serif;
+    }
+
+    .cta-btn {
+        background-color: white;
+        border: none;
+        height: 50px;
+        font-weight: 700;
+        width: 162px;
+        border-radius: 30px;
+        font-size: 15px;
+    }
+
+    .cta-btn:hover {
+        transform: scale(1.1);
+    }
+
+    .container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0; 
+        width: 150%;
+        height: 150%;
+        background: repeating-radial-gradient(
+          circle at top center,
+          #11111136,
+          #1111113d 15px,
+          #22222240 15px,
+          #22222238 30px
+        );
+        background-size: 100% 100%;
+        transition: background-size 0.4s ease-in-out;
+        z-index: -1;
+        pointer-events: none; 
+    }
+
+    .container:hover::before {
+        background-size: 200% 200%;
+    }
+
+    .mobile-footer {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .mobile-footer p {
+        font-family: "inter", sans-serif;
+        font-size: 13px;
+        padding-top: 5px;
+    }
+  
+    .mob-con {
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .mobile-footer img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    .company {
+        padding-top: 10px;
+    }
+
+    .mobile-ref {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-ref a {
+        text-decoration: none;
+        color: #000000;
+        font-family: "inter", sans-serif;
+        font-size: 13px;
+        padding-top: 10px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+}
+
 

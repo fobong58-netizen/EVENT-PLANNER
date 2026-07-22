@@ -578,7 +578,7 @@ footer {
         color: white;
     }
 
-     .show {
+    .show {
         display: flex;
         align-items: center;
         flex-direction: column;
