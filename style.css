@@ -837,14 +837,15 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
     padding-left: 15px;
     padding-right: 15px;
     width: 100%;
-    height: 50px;
+    height: 60px;
     background-color: #11111145; /* Dark theme match */
     color: #fff;
-    position: relative;
     z-index: 100;
     box-sizing: border-box;
 }
@@ -869,21 +870,22 @@ footer {
 /* ==========================================================================
    3. HAMBURGER LINES (Default Closed State - Parallel Lines)
    ========================================================================== */
-.line {
+.ham-line {
     display: block;
     width: 100%;
     height: 2px;
     background-color: #fff;
+    opacity: 1;
     transition: transform 0.3s ease, opacity 0.3s ease;
     transform-origin: center; /* Crucial for rotating cleanly from the middle */
 }
 
 /* Ensure lines start perfectly flat on page load */
-.line-1 {
+.ham-line-1 {
     transform: translateY(0) rotate(0deg);
 }
 
-.line-2 {
+.ham-line-2 {
     transform: translateY(0) rotate(0deg);
 }
 
@@ -891,12 +893,12 @@ footer {
    4. ACTIVE STATE (When clicked, form a clean "X")
    ========================================================================== */
 /* Move line 1 down to the middle and spin it 45 degrees */
-.menu-toggle.active .line-1 {
+.menu-toggle.active .ham-line-1 {
     transform: translateY(7px) rotate(45deg); 
 } 
 
 /* Move line 2 up to the middle and spin it -45 degrees */
-.menu-toggle.active .line-2 {
+.menu-toggle.active .ham-line-2 {
     transform: translateY(-7px) rotate(-45deg);
 }
 
