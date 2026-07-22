@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
@@ -14,6 +13,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -834,9 +835,11 @@ footer {
    ========================================================================== */
 .mobile-nav {
     display: flex;
-    gap: 620px;
+    justify-content: space-between;
     align-items: center;
     padding-bottom: 80px;
+    padding-left: 15px;
+    padding-right: 15px;
     width: 100%;
     height: 50px;
     background-color: #11111145; /* Dark theme match */
@@ -996,13 +999,15 @@ footer {
     }
 
     .mobile-flower {
-        width: 700px;
+        width: 100%;
+        max-width: 700px;
         height: 300px;
         object-fit: cover;
     }
 
     .mobile-hug {
-        width: 700px;
+        width: 100%;
+        max-width: 700px;
         height: 300px;
         object-fit: cover;
     }
@@ -1025,7 +1030,8 @@ footer {
     }
 
     .mobile-section p {
-        width: 500px;
+        width: 100%;
+        max-width: 500px;
         padding-top: 15px;
         font-family: "inter", sans-serif;
         font-size: 14px;
@@ -1091,7 +1097,8 @@ footer {
 }
 
 .mobile-black {
-    width: 670px;
+    width: 100%;
+    max-width: 670px;
     height: 300px;
     flex-shrink: 0;
 }
@@ -1139,7 +1146,8 @@ footer {
 }
 
 .mobile-dream p {
-    width: 620px;
+    width: 100%;
+    max-width: 620px;
     padding-top: 7px;
     padding-left: 9px;
     color: gray;    
@@ -1149,7 +1157,8 @@ footer {
     display: flex;
     width: 100%;
     flex-direction: column;
-    padding-left: 500px;
+    align-items: flex-end;
+    padding-right: 20px;
     padding-bottom: 30px;
 }
 
@@ -1161,9 +1170,12 @@ footer {
     display: flex;
     width: 100%;
     height: 150px;
-    gap: 500px;
+    justify-content: space-between;
+    align-items: center;
     padding-left: 30px;
+    padding-right: 30px;
     padding-top: 30px;
+    box-sizing: border-box;
 }
 
 .wed-butt {
@@ -1298,12 +1310,8 @@ footer {
         background-position: center;
         background-size: cover;
         height: 800px;
-        width: 450px;
+        width: 100%;
         gap: 20px;
-    }
-
-    .mobile-nav {
-        gap: 325px;
     }
 
     .mobile-header h1 {
@@ -1349,7 +1357,7 @@ footer {
     }
 
     .mobile-section{
-        width: 450px;
+        width: 100%;
     }
 
     .mobile-section p {
@@ -1374,19 +1382,19 @@ footer {
     }
 
     .mobile-weddings {
-        gap: 140px;
         padding-top: 55px;
-        padding-left: 20px;
     }
 
     .mobile-parent {
-        width: 450px;
+        width: 100%;
         padding-left: 40px;
+        box-sizing: border-box;
     }
 
     .mobile-first {
-        width: 450px;
+        width: 100%;
         padding-left: 20px;
+        box-sizing: border-box;
     }
 
     .mobile-first img {
@@ -1423,7 +1431,7 @@ footer {
         background-position: center;
         background-size: cover;
         height: 800px;
-        width: 320px;
+        width: 100%;
         gap: 20px;
         padding-bottom: 30px;
         
@@ -1445,12 +1453,12 @@ footer {
     }
 
     .mobile-header h1 {
-        width: 320px;
+        width: 100%;
     }
 
     .marquee-container {
         padding-bottom: 390px;
-        width: 320px;
+        width: 100%;
     }
 
     .mobile-about {
@@ -1494,7 +1502,6 @@ footer {
 
     .mobile-weddings {
         padding-bottom: 20px;
-        gap: 90px;
     }
 
     .mobile-parent {
@@ -1503,7 +1510,7 @@ footer {
     }
 
     .mobile-first {
-        width: 320px;
+        width: 100%;
         gap: 10px;
     }
 
@@ -1526,8 +1533,3 @@ footer {
     }
 
 }
-
-
-
-
-
