@@ -477,6 +477,7 @@ footer {
         background-image: url(/wedding-background.png);
         background-attachment: fixed;
         height: 250px;
+        width: 100%;
     }
 
     .mobile-header h1 {
