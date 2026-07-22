@@ -469,6 +469,7 @@ footer {
 
     .mobile {
         display: block;
+        width: 100%;
         
     }
 
@@ -653,6 +654,7 @@ footer {
     text-align: center;
     padding-right: 30px;
     height: 250px;
+    width: 100%;
     background-color: rgb(24, 26, 25);
 }
 
@@ -732,6 +734,7 @@ footer {
 
     .mobile-header {
         background-size: cover;
+        width: 100%;
     }
 
     .mobile-nav {
@@ -743,7 +746,6 @@ footer {
     }
 
     .mobile-main {
-        width: 360px;
         background-size: 339px 300px;
         background-position: 10px 10px;
         padding-left: 15px;
@@ -797,7 +799,6 @@ footer {
     }
 
     .mobile-main {
-        width: 320px;
         background-size: 316px 400px;
         background-position: 20px 10px;
         padding-left: 23px;
