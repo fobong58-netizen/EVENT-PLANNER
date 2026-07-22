@@ -754,7 +754,7 @@ footer {
     .mobile-main {
         background-size: 339px 300px;
         background-position: 10px 10px;
-        padding-left: 15px;
+        padding-left: 0px;
     }
 
     .pic {
@@ -812,7 +812,7 @@ footer {
     .mobile-main {
         background-size: 316px 400px;
         background-position: 20px 10px;
-        padding-left: 23px;
+        padding-left: 0px;
     }
 
     .mobile-main h2 {
