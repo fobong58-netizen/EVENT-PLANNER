@@ -656,6 +656,8 @@ footer {
     .sec-text p {
         padding-top: 6px;
         color: white;
+        font-family: "inter", sans-serif;
+        font-size: 15px;
     }
 
     .mob-mid-sec {
@@ -678,6 +680,8 @@ footer {
 
     .mob-mid-sec h5 {
         color: white;
+        font-family: "inter", sans-serif;
+        font-size: 11px;
     }
 
     .pro {
@@ -771,6 +775,7 @@ footer {
     .top-house {
         display: flex;
         flex-direction: column;
+        padding-top: 10px;
         gap: 15px;
         width: 100%;
         align-items: center;
@@ -778,6 +783,7 @@ footer {
 
     .mob-t {
         text-align: center;
+        font-family: "inter", sans-serif;
     }
 
     .top-house button {
@@ -909,12 +915,82 @@ footer {
     padding-top: 10px;
 
 }
+    
+}
+
+@media screen and (max-width: 320px) {
+    .mobile-header {
+        max-width: 320px;
+    }
+
+    .mobile-nav {
+        width: 100%;
+        gap: 220px;
+    }
+
+    .show {
+        width: 100%;
+        position: absolute;
+    }
+
+    .top {
+        gap: 220px;
+    }
+
+    .mobile-header h1 {
+        font-size: 33px;
+        padding-right: 50px;
+        padding-left: 10px;
+    }
+
+    .sec-text h1 {
+        font-size: 20px;
+    }
+
+    .sec-text p {
+        font-size: 11px;
+    }
+
+    .mob-card {
+        width: 280px;
+        height: 280px;
+    }
+
+    .top-house h1 {
+        font-size: 23px;
+    }
+
+    .mob-t p {
+        font-size: 12px;
+    }
+
+    .mobile-grid {
+        gap: 15px;
+    }
+
+    .mob-grid1 {
+        gap: 15px;
+    }
+
+    .mob-grid2 {
+        gap: 15px;
+    }
+
+    .mob-grid1 img {
+        width: 120px;
+        height: 170px;
+    }
+
+    .mob-grid2 img {
+        width: 120px;
+        height: 170px;
+    }
+    
+    .trust {
+        padding-left: 50px;
+    }
 
 
-    
-    
-
-    
 }
 
 

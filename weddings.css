@@ -469,7 +469,7 @@ footer {
 
     .mobile {
         display: block;
-        height: 2800px;
+        
     }
 
     .mobile-header {
@@ -726,11 +726,79 @@ footer {
 
 }
 
+}
 
+@media screen and (max-width: 320px) {
 
+    .mobile-header {
+        width: 100%;
+    }
 
+    .mobile-nav {
+        gap: 220px;
+    }
 
+    .show {
+        max-width: 320px;
+    }
 
+    .top {
+        gap: 220px;
+    }
 
+    .mobile-main {
+        width: 100%;
+        background-size: 290px 400px;
+        padding-left: 26px;
+    }
+
+    .mobile-main h2 {
+        font-size: 18px;
+    }
+
+    .mobile-main h1 {
+        font-size: 18px;
+    }
+    .every {
+        font-size: 12px;
+        width: 280px;
+    }
+
+    .cis {
+        font-size: 20px;
+    }
+
+    .pic {
+        width: 100%;
+    }
+
+    .mob-img {
+        width: 280px;
+    }
+
+    .pic1 {
+        width: 100%;
+    }
+
+    .text-overlay {
+        width: 100%;
+    }
+
+    .pic2 {
+        width: 100%;
+    }
+
+    .etal {
+        width: 100%;
+        align-items: center;
+        padding-right: 20px;
+    }
+
+    .etal p {
+        padding-left: 20px;
+        font-size: 14px;
+        width: 310px;
+    }
+    
 }
   
