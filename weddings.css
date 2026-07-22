@@ -574,11 +574,13 @@ footer {
     .mobile-main h2 {
         color: gold;
         font-size: 18px;
+        padding-left: 10px;
         font-family: "inter", sans-serif;
     }
 
     .mobile-main h1 {
         width: 350px;
+        padding-left: 10px;
         font-size: 23px;
         color: white;
         padding-top: 14px;
@@ -589,12 +591,14 @@ footer {
         width: 350px;
         font-size: 14px;
         padding-top: 15px;
+        padding-left: 10px;
     }
 
     .cis {
         font-family: "corinthia", sans-serif;
         color: white;
         font-size: 19px;
+        padding-left: 10px;
     }
 
     .pic {
