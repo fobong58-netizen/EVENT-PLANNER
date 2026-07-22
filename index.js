@@ -12,7 +12,7 @@ const bgImage = document.querySelector(`header`)
 
 bgImage.style.backgroundImage = `url(${images[currentIndex]})`;
 
-function showImage(){
+function showHeaderImage(){
     bgImage.style.backgroundImage = `url(${images[currentIndex]})`;
 
 }
@@ -24,7 +24,7 @@ setInterval(() => {
         currentIndex = 0;
     }
 
-    showImage();
+    showHeaderImage();
 }, `2000`);
 
 
@@ -102,7 +102,7 @@ const backImage1 = document.querySelector(`.mobile-header`)
 
 backImage1.style.backgroundImage = `url(${images1[Index]})`;
 
-function showImage(){
+function showMobileImage(){
     backImage1.style.backgroundImage = `url(${images1[Index]})`;
 
 }
@@ -114,6 +114,5 @@ setInterval(() => {
         Index = 0;
     }
 
-    showImage();
+    showMobileImage();
 }, `2000`);
-

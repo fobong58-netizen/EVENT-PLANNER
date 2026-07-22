@@ -821,7 +821,7 @@ footer {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background-attachment: fixed;
+        background-attachment: scroll;
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
@@ -1293,7 +1293,7 @@ footer {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background-attachment: fixed;
+        background-attachment: scroll;
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
@@ -1405,7 +1405,7 @@ footer {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background-attachment: fixed;
+        background-attachment: scroll;
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
