@@ -469,15 +469,13 @@ footer {
 
     .mobile {
         display: block;
-        width: 100%;
-        
     }
 
     .mobile-header {
         background-image: url(/wedding-background.png);
         background-attachment: fixed;
         height: 250px;
-        width: 100%;
+        width: 450px;
     }
 
     .mobile-header h1 {
@@ -655,7 +653,7 @@ footer {
     text-align: center;
     padding-right: 30px;
     height: 250px;
-    width: 100%;
+    width: 450px;
     background-color: rgb(24, 26, 25);
 }
 
@@ -735,7 +733,7 @@ footer {
 
     .mobile-header {
         background-size: cover;
-        width: 100%;
+        width: 360px;
     }
 
     .mobile-nav {
@@ -775,6 +773,10 @@ footer {
 
     .pic2 {
         width: 330px;
+    }
+
+    .etal {
+        width: 360px;
     }
 
     .etal p {
@@ -851,7 +853,7 @@ footer {
     }
 
     .etal {
-        width: 100%;
+        width: 320px;
         align-items: center;
         padding-right: 20px;
     }
