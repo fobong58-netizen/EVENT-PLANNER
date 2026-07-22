@@ -850,6 +850,10 @@ footer {
     box-sizing: border-box;
 }
 
+.mobile-nav:has(.nav-menu.active) {
+    background-color: #000; /* Solid black while the menu is open, matching the dropdown */
+}
+
 /* ==========================================================================
    2. HAMBURGER BUTTON (Outer Wrapper)
    ========================================================================== */
@@ -920,17 +924,27 @@ footer {
     /* --- KEY FIXES FOR HIDING --- */
     opacity: 0;
     visibility: hidden; /* This completely hides the menu on page load */
-    transform: translateY(-10px); /* Slightly tucked up */
+    transform: scaleY(0);
+    transform-origin: top; /* Grows downward from the nav bar, like a curtain unrolling */
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
+.nav-menu-logo {
+    align-self: flex-start;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
 /* ==========================================================================
-   6. DROPDOWN MENU ACTIVE STATE (Slides down & fades in when clicked)
+   6. DROPDOWN MENU ACTIVE STATE (Unrolls top-to-bottom & fades in when clicked)
    ========================================================================== */
 .nav-menu.active {
     opacity: 1;
     visibility: visible; /* Makes it interactive and visible */
-    transform: translateY(0px); /* Slides down to original position */
+    transform: scaleY(1); /* Unrolls down to full height */
 }
 
 /* Links Styling */
@@ -962,7 +976,7 @@ footer {
     .nav-menu.active {
         opacity: 1;
         visibility: visible;
-        transform: translateY(0px);
+        transform: scaleY(1);
     }
 
 

@@ -44,7 +44,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 
   // Tell the observer to watch all elements with the 'reveal' class
-  document.querySelectorAll('nav').forEach((el) => observer.observe(el));
+  document.querySelectorAll('.desktop nav').forEach((el) => observer.observe(el));
   document.querySelectorAll('.slider-content h1').forEach((el) => observer.observe(el));
   document.querySelectorAll('.line').forEach((el) => observer.observe(el));
   document.querySelectorAll('.underline p').forEach((el) => observer.observe(el));
@@ -81,6 +81,10 @@ const observer = new IntersectionObserver((entries) => {
 
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
+
+// Force closed on load, in case any other script touches these classes
+menuToggle.classList.remove('active');
+navMenu.classList.remove('active');
 
 menuToggle.addEventListener('click', () => {
     // Both elements get the "active" class at the exact same moment
