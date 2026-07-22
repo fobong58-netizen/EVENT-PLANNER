@@ -455,7 +455,7 @@ nav.active {
 }
 
 .image-back {
-    background-image: url(/black.jpg);
+    background-image: url(black.jpg);
     background-color: rgba(18, 11, 11, 0.103);
     width: 600px;
 }
@@ -465,7 +465,7 @@ nav.active {
     gap: 400px;
     padding-top: 100px;
     height: 100vh;
-    background-image: url(/love.png);
+    background-image: url(love.png);
     
 }
 
@@ -930,7 +930,6 @@ footer {
 }
 
 
-
 /* ==========================================================================
    6. DROPDOWN MENU ACTIVE STATE (Unrolls top-to-bottom & fades in when clicked)
    ========================================================================== */
@@ -1141,7 +1140,7 @@ footer {
 }
 
 .mobile-nest {
-    background-image: url(/love.png);
+    background-image: url(love.png);
     width: 100%;
     background-position: center;
     background-size: cover;

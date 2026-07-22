@@ -6,11 +6,11 @@ if ('scrollRestoration' in history) {
 window.scrollTo(0, 0);
 
 const images = [
-    `/background1.jpg`,
-    `/background2.jpg`,
-    `/background3.jpg`,
-    `/background4.jpg`,
-    `/background5.jpg`,
+    `background1.jpg`,
+    `background2.jpg`,
+    `background3.jpg`,
+    `background4.jpg`,
+    `background5.jpg`,
 ]
 
 let currentIndex = 0;
@@ -100,11 +100,11 @@ menuToggle.addEventListener('click', () => {
 });
 
 const images1 = [
-    `/background1.jpg`,
-    `/background2.jpg`,
-    `/background3.jpg`,
-    `/background4.jpg`,
-    `/background5.jpg`,
+    `background1.jpg`,
+    `background2.jpg`,
+    `background3.jpg`,
+    `background4.jpg`,
+    `background5.jpg`,
 ]
 
 let Index = 0;
