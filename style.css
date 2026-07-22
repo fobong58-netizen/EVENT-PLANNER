@@ -1296,9 +1296,6 @@ footer {
 
 
 @media screen and (max-width: 450px) {
-    .mobile {
-        padding-top: 3700px;
-    }
 
      .mobile-header {
         display: flex;
