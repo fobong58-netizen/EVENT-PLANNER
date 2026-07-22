@@ -1392,7 +1392,7 @@ footer {
 
     .mobile-parent {
         width: 100%;
-        padding-left: 40px;
+        padding-left: 20px;
         box-sizing: border-box;
     }
 
@@ -1403,7 +1403,7 @@ footer {
     }
 
     .mobile-first img {
-        width: 150px;
+        width: 180px;
     }
 
     .mobile-second {
@@ -1411,7 +1411,7 @@ footer {
     }
 
     .mobile-second img {
-        width: 150px;
+        width: 180px;
     }
 
 
