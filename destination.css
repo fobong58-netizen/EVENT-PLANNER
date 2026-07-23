@@ -972,7 +972,7 @@ footer {
         width: calc(90% - 4px);
         background-color: #1a1c1e;
         color: #ffffff;
-        padding-top: 25px;
+        padding-top: 48px;
         border-radius: 40px;
         text-align: center;
         overflow: hidden;
@@ -980,12 +980,13 @@ footer {
     }
 
     .mob-container h1 {
-        font-size: 24px;
+        font-size: 21px;
+        padding-top: 30px;
     }
 
     .mob-container p {
-        font-size: 20px;
-        padding-top: 20px;
+        font-size: 18px;
+        padding-top: 10px;
         font-family: "inter", sans-serif;
     }
 
@@ -994,9 +995,9 @@ footer {
         border: none;
         height: 50px;
         font-weight: 700;
-        width: calc(55% - 5px);
+        width: calc(45% - 5px);
         border-radius: 30px;
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .cta-btn:hover {

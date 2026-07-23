@@ -991,7 +991,6 @@ footer {
         width: calc(95% - 3px);
         height: 420px;
         gap: 10px;
-        z-index: 111;
     }
 
     .hero-mobile h1 {
@@ -1266,8 +1265,116 @@ details[open] summary::after {
   transform: rotate(90deg); /* Rotates the arrow 90 degrees downward */
 }
 
+.mob-contain {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 400px;
+        width: 100%;
+        max-width: 450px;
+    }
 
+    .mob-container {
+        position: relative;
+        height: 300px;
+        width: calc(90% - 4px);
+        background-color: #1a1c1e;
+        color: #ffffff;
+        padding-top: 48px;
+        border-radius: 40px;
+        text-align: center;
+        overflow: hidden;
+        z-index: 1;
+    }
 
+    .mob-container h1 {
+        font-size: 21px;
+        padding-top: 30px;
+    }
 
-    
+    .mob-container p {
+        font-size: 18px;
+        padding-top: 10px;
+        font-family: "inter", sans-serif;
+    }
+
+    .cta-btn {
+        background-color: white;
+        border: none;
+        height: 50px;
+        font-weight: 700;
+        width: calc(45% - 5px);
+        border-radius: 30px;
+        font-size: 12px;
+    }
+
+    .cta-btn:hover {
+        transform: scale(1.1);
+    }
+
+    .mob-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0; 
+        width: 150%;
+        height: 150%;
+        background: repeating-radial-gradient(
+          circle at top center,
+          #11111136,
+          #1111113d 15px,
+          #22222240 15px,
+          #22222238 30px
+        );
+        background-size: 100% 100%;
+        transition: background-size 0.4s ease-in-out;
+        z-index: -1;
+        pointer-events: none; 
+    }
+
+    .mob-container:hover::before {
+        background-size: 200% 200%;
+    }
+
+     .mobile-footer {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .mobile-footer p {
+        font-family: "inter", sans-serif;
+        font-size: 13px;
+        padding-top: 5px;
+    }
+  
+    .mob-con {
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .mobile-footer img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .company {
+        padding-top: 10px;
+    }
+
+    .mobile-ref {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-ref a {
+        text-decoration: none;
+        color: #000000;
+        font-family: "inter", sans-serif;
+        font-size: 13px;
+        padding-top: 10px;
+    }
+
 }
