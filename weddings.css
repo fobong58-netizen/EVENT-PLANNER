@@ -562,10 +562,10 @@ footer {
     .mobile-main {
         background-image: url(/paint.png);
         background-repeat: no-repeat;
-        background-size: 410PX 400px;
+        background-size: 400PX 400px;
         padding-top: 80px;
-        padding-left: 15px;
-        background-position: 10PX 30PX ;
+        padding-left: 20px;
+        background-position: center top 15px;
         /* overflow: hidden; */
         padding-bottom: 20px;
         z-index: 3;
@@ -608,7 +608,8 @@ footer {
 
     .mob-img {
         position: relative;
-        width: 400px;
+        max-width: 450px;
+        width: 100%;
     }
 
     /* .mob-img2 {
@@ -624,18 +625,18 @@ footer {
     } */
 
     .pic1 {
-        width: 400px;
+        width: calc(95% - 3px);
     }
 
     .pic2 {
-        width: 400px;
+        width: calc(95% - 3px);
     }
 
     .text-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 400px;
+    width: calc(95% - 3px);
     height: 60%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
     display: flex;
@@ -756,8 +757,7 @@ footer {
     }
 
     .mobile-main {
-        background-size: 339px 300px;
-        background-position: 10px 10px;
+        background-size: 335px 300px;
         padding-left: 15px;
     }
 
@@ -767,11 +767,12 @@ footer {
     }
 
     .mob-img {
-        width: 330px;
+        width: 100%;
+        max-width: 360px;
     }
 
     .text-overlay {
-        width: 330px;
+        width: calc(95% - 3px);
     }
 
     .tt {
@@ -779,11 +780,11 @@ footer {
     }
 
     .pic1 {
-        width: 330px;
+        width: calc(95% - 3px);
     }
 
     .pic2 {
-        width: 330px;
+        width: calc(95% - 3px);
     }
 
     .etal {
@@ -801,21 +802,21 @@ footer {
 
 
     .mobile-nav {
-        gap: 270px;
-        width: 320px;
+        gap: 215px;
+        width: 100%;
+        max-width: 320px;
     }
 
     .top {
-        gap: 390px;
+        gap: 210px;
     }
 
-    .top {
-        gap: 220px;
-    }
+    
 
     .mobile-main {
-        background-size: 316px 400px;
-        background-position: 20px 10px;
+        background-size: 300px 400px;
+        width: 100%;
+        max-width: 320px;
         padding-left: 10px;
     }
 
@@ -830,7 +831,7 @@ footer {
     }
     .every {
         font-size: 12px;
-        width: 280px;
+        width: calc(90% - 4px);
         padding-left: 8px;
     }
 
@@ -846,22 +847,24 @@ footer {
 
     .pic {
         width: 100%;
+        padding-left: 20px;
     }
 
     .mob-img {
-        width: 300px;
+        width: 100%;
+        max-width: 320px;
     }
 
     .pic1 {
-        width: 300px;
+        width: calc(95% - 3px);
     }
 
     .text-overlay {
-        width: 300px;
+        width: calc(95% - 3px);
     }
 
     .pic2 {
-        width: 300px;
+        width: calc(95% - 3px);
     }
 
     .etal {

@@ -626,6 +626,7 @@ footer {
         display: flex;
         flex-direction: column;
         width: 100%;
+        max-width: 450px;
     }
 
     .mobile-header {
@@ -636,9 +637,10 @@ footer {
     }
 
     .mobile-header h1 {
-        padding-top: 60px;
-        padding-left: 90px;
-        width: 350px;
+        padding-top: 120px;
+        padding-left: 25px;
+        padding-right: 20px;
+        
         text-align: center;
         color: white;
     }
@@ -648,9 +650,12 @@ footer {
         position: fixed;
         background-color: gray;
         align-items: center;
-        gap: 340px;
+        justify-content: space-between;
+        padding-right: 15px;
         height: 60px;
+        width: 100%;
         padding-left: 10px;
+        z-index: 101;
     }
 
     .show {
@@ -659,7 +664,7 @@ footer {
         flex-direction: column;
         padding-top: 70px;
         width: 100%;
-        height: 750px;
+        height: 100vh;
         background-color: black;
         position: fixed; 
         z-index: 101;
@@ -692,8 +697,10 @@ footer {
 
     .top {
         padding-left: 10px;
+        padding-right: 15px;
+        width: 100%; 
+        justify-content: space-between;
         display: flex;
-        gap: 350px;
         align-items: center;
     }
 
@@ -720,33 +727,36 @@ footer {
     }
 
     .moment {
-        width: 320px;
+        width: 100%;
         padding-top: 10px;
-        padding-left: 60px;
+        padding-left: 20px;
+        padding-right: 10px;
         font-family: "inter", sans-serif;
         text-align: center;
         font-size:  39px;
     }
 
     .sun {
-        width: 430px;
+        width: 100%;
         text-align: center;
-        padding-left: 0px;
+        padding-left: 7px;
+        padding-right: 7px;
     }
 
     .pad {
         width: 100%;
-        padding-left: 30px;
+        max-height: 450px;
+        padding-left: 10px;
     }
 
     .des {
-        width: 380px;
+        width: calc(97% - 3px);
         border-radius: 15px;
     }
 
     .mob-nest {
         width: 100%;
-        padding-left: 30px;
+        padding-left: 10px;
         padding-top: 20px;
         height: 150px;
     }
@@ -756,7 +766,7 @@ footer {
         flex-direction: column;
         background-color: #000000;
         border-radius: 15px;
-        width: 380px;
+        width: calc(97% - 3px);
         height: 145px;
     }
 
@@ -779,18 +789,20 @@ footer {
     .pad1 {
         padding-top: 30px;
         width: 100%;
-        padding-left: 30px;
+        max-width: 450px;
+        padding-left: 10px;
     }
 
     .beach1 {
-        width: 380px;
+        width: calc(97% - 3px);
         border-radius: 15px;
     }
 
     .from-nest {
         width: 100%;
-        padding-left: 30px;
-        padding-top: 15px;
+        max-width: 450px;
+        padding-left: 10px;
+        padding-top: 10px;
     }
 
     .from {
@@ -798,7 +810,7 @@ footer {
         background-color: #000000;
         color: white;
         height: 100px;
-        width: 380px;
+        width: calc(97% - 3px);
     }
 
     .from p {
@@ -820,13 +832,14 @@ footer {
 
     .mobile-main p {
         text-align: center;
-        width: 380px;
-        padding-left: 35px;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
         padding-top: 10px;
     }
 
     .m-vow {
-        width: 380px;
+        width: calc(97% - 3px);
         border-radius: 30px 0px 30px 0px;
     }
 
@@ -834,7 +847,9 @@ footer {
         display: flex;
         flex-direction: column;
         width: 100%;
-        padding-left: 30px;
+        max-width: 450px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .next h2 {
@@ -844,21 +859,22 @@ footer {
     }
 
     .next p {
-        width: 380px;
+        width: 100%;
         padding-bottom: 15px;
     }
 
     .next img {
-        width: 380px;
+        width: calc(97% - 3px);
         border-radius: 30px 0px 30px 0px;
     }
 
-    .mobile-section {
+    .mobile-section2 {
         display: flex;
         flex-direction: column;
         width: 100%;
-        padding-top: 30px;
-        height: 800px;
+        height: 750px;
+        max-width: 450px;
+        padding-top: 10px;
         background-color:  rgb(237, 237, 237);
     }
 
@@ -898,66 +914,73 @@ footer {
 
     .nest-mid {
         width: 100%;
-        padding-left: 20px;
+        max-width: 450px;
+        padding-left: 10px;
         padding-bottom: 20px;
     }
 
     .mid-vow {
-        width: 400px;
+        width: calc(97% - 3px);
     }
 
     .house2 {
         display: flex;
         gap: 15px;
         width: 100%;
-        padding-left: 20px;
+        max-width: 450px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .l-vow1 {
-        width: 200px;
+        width: calc(50% - 7.5px);
         object-fit: cover;
     }
 
     .house3 {
         display: flex;
+        width: calc(50% - 7.5px);
         flex-direction: column;
         gap: 15px;
     }
 
     .l-vow2 {
-        width: 185px;
+        width: 100%;
         object-fit: cover;
     }
 
     .mob-section2 {
         width: 100%;
-        height: 750px;
+        height: 700px;
         background-color: rgba(240, 255, 255, 0.493);
     }
 
-    .contain {
-        padding-left: 20px;
+    .mob-contain {
+        padding-left: 10px;
+        padding-right: 10px;
         height: 400px;
+        width: 100%;
+        max-width: 450px;
     }
 
-    .container {
+    .mob-container {
         position: relative;
-        width: 380px;
         height: 300px;
+        width: calc(90% - 4px);
         background-color: #1a1c1e;
         color: #ffffff;
-        padding: 60px 40px;
+        padding-top: 25px;
         border-radius: 40px;
         text-align: center;
         overflow: hidden;
         z-index: 1;
     }
 
-    .container h1 {
+    .mob-container h1 {
         font-size: 24px;
     }
 
-    .container p {
+    .mob-container p {
         font-size: 20px;
         padding-top: 20px;
         font-family: "inter", sans-serif;
@@ -968,7 +991,7 @@ footer {
         border: none;
         height: 50px;
         font-weight: 700;
-        width: 162px;
+        width: calc(55% - 5px);
         border-radius: 30px;
         font-size: 15px;
     }
@@ -977,7 +1000,7 @@ footer {
         transform: scale(1.1);
     }
 
-    .container::before {
+    .mob-container::before {
         content: '';
         position: absolute;
         top: 0;
@@ -997,7 +1020,7 @@ footer {
         pointer-events: none; 
     }
 
-    .container:hover::before {
+    .mob-container:hover::before {
         background-size: 200% 200%;
     }
 
@@ -1020,8 +1043,8 @@ footer {
     }
 
     .mobile-footer img {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
     }
 
@@ -1055,7 +1078,9 @@ footer {
     }
 
     .sun {
-        width: 320px;
+        width: 100%;
+        padding-left: 7px;
+        padding-right: 7px;
     }
     
 }
