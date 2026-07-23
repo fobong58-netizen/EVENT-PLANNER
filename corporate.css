@@ -684,6 +684,13 @@ footer {
         color: white;
     }
 
+
+    .mob-mid-sec button:hover {
+        transform: scale(1.1);
+        background-color: whitesmoke;
+        color: #000000;
+    }
+
     .mob-mid-sec h5 {
         color: white;
         font-family: "inter", sans-serif;
@@ -800,6 +807,14 @@ footer {
         color: white;
         background-color: #000000;
         border: none;
+    }
+
+    .top-house button:hover {
+        transform: translateX(4px) scale(1.1);
+    }
+
+    .mob-arrow:hover {
+        transform: rotate(360deg);
     }
 
     .mob-arrow {
