@@ -1209,6 +1209,7 @@ footer {
 
 .wed-butt:hover {
     transform: scale(1.1);
+    background-color: #00000016;
 }
 
 .mobile-parent {
