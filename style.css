@@ -921,7 +921,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     gap: 20px;
-    padding: 40px 0;
+    padding: 20px 0px;
     
     /* --- KEY FIXES FOR HIDING --- */
     opacity: 0;
@@ -941,15 +941,6 @@ footer {
     transform: scaleY(1); /* Unrolls down to full height */
 }
 
-/* Links Styling */
-.nav-menu a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-    transition: color 0.2s;
-}
-
 .nav-menu a:hover {
     color: #c5a880; /* Gold/champagne hover */
     transform: scale(1.4);
@@ -959,7 +950,7 @@ footer {
     .nav-menu a {
         color: #fff;
         text-decoration: none;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         letter-spacing: 1px;
         transition: color 0.2s;
     }
