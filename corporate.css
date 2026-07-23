@@ -542,6 +542,8 @@ footer {
     .mobile {
         display: block;
         overflow-x: hidden;
+        width: 100%;
+        max-width: 450px;
     }
 
     .mobile-nav {
