@@ -553,7 +553,6 @@ footer {
         position: fixed;
         background-color: rgba(128, 128, 128, 0.409);
         width: 100%;
-        max-width: 440px;
         height: 70px;
         z-index: 100;
     }
