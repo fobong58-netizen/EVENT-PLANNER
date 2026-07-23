@@ -526,6 +526,7 @@ footer {
         align-items: center;
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
     }
 
     .show {
@@ -536,12 +537,13 @@ footer {
         text-decoration: none;
         color: white;
         padding-top: 20px;
-        font-size: 18px;
+        font-size: 22px;
         font-family: "inter", sans-serif;
     }
 
     .show a:hover {
         color: goldenrod;
+        transform: scale(1.4);
     }
 
     .top {
