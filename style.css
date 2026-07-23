@@ -1149,6 +1149,9 @@ footer {
 
 .mobile-butt:hover {
     transform: scale(1.1);
+    background-color: #0000000e;
+    color: #c5a880;
+    border: 1px solid goldenrod;
 }
 
 .mobile-nest {
@@ -1209,7 +1212,8 @@ footer {
 
 .wed-butt:hover {
     transform: scale(1.1);
-    background-color: #00000016;
+    background-color: white;
+    color: #000;
 }
 
 .mobile-parent {
