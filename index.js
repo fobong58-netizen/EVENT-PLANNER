@@ -94,7 +94,7 @@ menuToggle.classList.remove('active');
 navMenu.classList.remove('active');
 
 menuToggle.addEventListener('click', () => {
-    // Both elements get the "active" class at the exact same moment
+// Both elements get the "active" class at the exact same moment
     menuToggle.classList.toggle('active');
     navMenu.classList.toggle('active');
 });
@@ -115,7 +115,6 @@ backImage1.style.backgroundImage = `url(${images1[Index]})`;
 
 function showMobileImage(){
     backImage1.style.backgroundImage = `url(${images1[Index]})`;
-
 }
 
 setInterval(() => {

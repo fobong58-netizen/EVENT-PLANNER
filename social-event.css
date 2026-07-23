@@ -809,16 +809,465 @@ footer {
     padding-top: 20px;
 }
 
-@media screen and (max-width: 320px) {
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 450px) {
 
  .desktop {
     display: none;
  }   
+
+ .mobile {
+    display: block;
+    overflow-x: hidden;
+ }
+
+ .mobile-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 600px;
+        width: 100%;
+        max-width: 450px;
+        gap: 20px;
+    }
     
+   /* ==========================================================================
+   1. NAVIGATION CONTAINER & LOGO
+   ========================================================================== */
+.mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    height: 60px;
+    background-color: #11111145; /* Dark theme match */
+    color: #fff;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.mobile-nav:has(.nav-menu.active) {
+    background-color: #000; /* Solid black while the menu is open, matching the dropdown */
+}
+
+/* ==========================================================================
+   2. HAMBURGER BUTTON (Outer Wrapper)
+   ========================================================================== */
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 16px; /* Height determines the spacing between the 2 lines */
+    padding: 0;
+    position: relative;
+    z-index: 101;
+}
+
+/* ==========================================================================
+   3. HAMBURGER LINES (Default Closed State - Parallel Lines)
+   ========================================================================== */
+.ham-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center; /* Crucial for rotating cleanly from the middle */
+}
+
+/* Ensure lines start perfectly flat on page load */
+.ham-line-1 {
+    transform: translateY(0) rotate(0deg);
+}
+
+.ham-line-2 {
+    transform: translateY(0) rotate(0deg);
+}
+
+/* ==========================================================================
+   4. ACTIVE STATE (When clicked, form a clean "X")
+   ========================================================================== */
+/* Move line 1 down to the middle and spin it 45 degrees */
+.menu-toggle.menu-open .ham-line-1 {
+    transform: translateY(7px) rotate(45deg); 
+} 
+
+/* Move line 2 up to the middle and spin it -45 degrees */
+.menu-toggle.menu-open .ham-line-2 {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ==========================================================================
+   5. DROPDOWN MENU (Default Closed State - Completely Hidden)
+   ========================================================================== */
+.nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex; /* Keep flex layout but hide it visually */
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0px;
+    z-index: 90;
+    
+    /* --- KEY FIXES FOR HIDING --- */
+    opacity: 0;
+    visibility: hidden; /* This completely hides the menu on page load */
+    transform: scaleY(0);
+    transform-origin: top; /* Grows downward from the nav bar, like a curtain unrolling */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+
+/* ==========================================================================
+   6. DROPDOWN MENU ACTIVE STATE (Unrolls top-to-bottom & fades in when clicked)
+   ========================================================================== */
+.nav-menu.menu-open {
+    opacity: 1;
+    visibility: visible; /* Makes it interactive and visible */
+    transform: scaleY(1); /* Unrolls down to full height */
+}
+
+.nav-menu a:hover {
+    color: #c5a880; /* Gold/champagne hover */
+    transform: scale(1.4);
+}
+
+
+    .nav-menu a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        transition: color 0.2s;
+    }
+
+    .nav-menu a:hover {
+        color: #c5a880; /* Subtle gold/champagne hover color */
+    }
+
+    .nav-menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: scaleY(1);
+    }
+
+
+
+    .mobile-nav img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .hero-mobile {
+        display: flex;
+        align-items: center;
+        padding-top: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+        flex-direction: column;
+        border-radius: 25px;
+        background-color: rgb(3, 3, 17);
+        width: calc(95% - 3px);
+        height: 420px;
+        gap: 10px;
+        z-index: 111;
+    }
+
+    .hero-mobile h1 {
+        font-size: 22px;
+        text-align: center;
+        color: white;
+    }
+
+    .mobile-empty {
+        display: block;
+        width: calc(70% - 2px);
+        height: 1px;
+        background-color: white;
+    }
+
+    .hero-mobile h2 {
+        font-size: 14px;
+        text-align: center;
+        color: white;
+        font-family: "inter", sans-serif;
+        width: calc(70% - 2px);
+    }
+
+    .hero-mobile img {
+        width: calc(40% - 3px);
+        height: 200px;
+    }
+
+    .mobile-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 1570px;
+        max-width: 450px;
+        align-items: center;
+        background-color: rgb(232, 232, 232);
+    }
+
+    .mobile-section h5 {
+        width: calc(80% - 5px);
+        text-align: center;
+        font-family: "inter", sans-serif;
+    }
+
+    .mobile-section p {
+        width: calc(85% - 2px);
+        text-align: center;
+        font-family: "inter", sans-serif;
+        font-size: 13px;
+    }
+
+    .mobile-section img {
+        width: calc(90% - 2px);
+        object-fit: cover;
+        border-radius: 20px;
+        height: 150px;
+    }
+
+    .mobile-main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 450px;
+        padding-top: 15px;
+        padding-left: 20px;
+        padding-right: 15px;
+        padding-bottom: 20px;
+        align-items: center;
+    }
+
+    .mob-grid1{
+        display: flex;
+        align-items: center;
+        padding-top: 20px;
+        gap: 25px;
+        flex-direction: column;
+        width: calc(90% - 2px);
+        border-radius: 20px;
+        background-color: #000;
+        height: 333px;
+    }
+
+    .mob-grid1 p {
+        width: calc(70% - 2px);
+        text-align: center;
+        color: white;
+        font-family: "inter", sans-serif;
+        font-size: 14px;
+    }
+
+    .mob-grid1 img {
+        width: calc(70% - 10px);
+    }
+
+
+    .new-mob {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 15px;
+        padding-bottom: 20px;
+        background-color: #000;
+        width: 100%;
+        max-width: 450px;
+        gap: 15px;
+    }
+
+    .new-mob img {
+        width: calc(88% - 8px);
+        height: 280px;
+        border-radius: 30px;
+        object-fit: cover;
+    }
+
+    .mobile-article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 450px;
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+
+    .mobile-article button {
+        width: calc(30% - 2px);
+        height: 30px;
+        font-size: 15px;
+        border-radius: 30px;
+        color: white;
+        background-color: #000;
+        border: none;
+    }
+
+    .mobile-article h5 {
+        width: calc(90% - 5px);
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .slider {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .slider-track {
+        display: flex;
+        overflow: hidden;
+        border-radius: 15px;
+        width: 90%;
+        margin: 0 auto;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .slider-track img {
+        flex: 0 0 100%;
+        width: 100%;
+        height: clamp(200px, 65vw, 320px);
+        object-fit: cover;
+    }
+    .slider-controls {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .slider-controls button {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: none;
+        background: #111;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+
+    .mob-faq {
+        display: flex;
+        flex-direction: column;
+        padding-right: 8px;
+        width: calc(90% - 7px);
+        align-items: center;
+    }
+
+    .mobile-question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+    height: fit-content;
+    padding: 40px 0px 30px 0px;
+    gap:  15px;
+    background-color: black;
+}
+
+
+.mob-faq h1 {
+    color: white;
+    font-family: "playfair", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.mob-faq2 {
+    width: calc(90% - 7px);
+    padding-top: 20px;
+    padding-right: 8px;
+}
+
+details {
+    padding-top: 40px;
+}
+
+details p {
+    color: white;
+    font-size: 16px;
+    padding-top: 10px;
+    line-height: 25px;
+    font-family: "inter", sans-serif;
+}
+
+.mob-sum {
+    display: flex;
+    color: white;
+    font-size: 25px;
+    font-family: "inter", sans-serif;
+    cursor: pointer;
+    list-style: none;
+    gap: 5px;
+}
+
+.mob-sum1 {
+    display: flex;
+    color: white;
+    font-size: 25px;
+    font-family: "inter", sans-serif;
+    cursor: pointer;
+    list-style: none;
+    gap: 5px;
+}
+
+.mob-nothing {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    
+}
+
+summary::-webkit-details-marker {
+  display: none; /* Hides default arrow in Safari */
+}
+
+/* Add your custom "greater than" arrow using a pseudo-element */
+summary::after {
+  content: '›'; /* You can use a standard '>' or '›' character */
+  font-size: 24px;
+  transition: transform 0.3s ease; /* This makes the rotation smooth */
+}
+
+/* Turn the arrow down when the <details> tag is open */
+details[open] summary::after {
+  transform: rotate(90deg); /* Rotates the arrow 90 degrees downward */
 }
 
 
 
 
-
-
+    
+}

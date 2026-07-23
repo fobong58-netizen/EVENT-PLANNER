@@ -79,10 +79,44 @@ const obs = new IntersectionObserver((entries) => {
   });
 
   // Tell the observer to watch all elements with the 'reveal' class
-  document.querySelectorAll('nav').forEach((el) => obs.observe(el));
+  document.querySelectorAll('header nav').forEach((el) => obs.observe(el));
   document.querySelectorAll('.parent').forEach((el) => obs.observe(el));
   document.querySelectorAll('.child h1').forEach((el) => obs.observe(el));
   document.querySelectorAll('.child p').forEach((el) => obs.observe(el));
   document.querySelectorAll('.top h1').forEach((el) => obs.observe(el));
   document.querySelectorAll('.lol').forEach((el) => obs.observe(el));
   document.querySelectorAll('.deco').forEach((el) => obs.observe(el));
+
+
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+// Force closed on load, in case any other script touches these classes
+menuToggle.classList.remove('menu-open');
+navMenu.classList.remove('menu-open');
+
+menuToggle.addEventListener('click', () => {
+  //Both elements get the "active" class at the exact same moment
+    menuToggle.classList.toggle('menu-open');
+    navMenu.classList.toggle('menu-open');
+});
+
+
+const track = document.getElementById('sliderTrack');
+const slides = track ? track.children : [];
+let currentIndex = 0;
+
+function updateSlider() {
+  // Shift the track left by (index * 100%) — this is what makes it "slide"
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+document.getElementById('nextBtn')?.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length; // wraps back to 0 at the end
+  updateSlider();
+});
+
+document.getElementById('prevBtn')?.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length; // wraps to last slide
+  updateSlider();
+});
