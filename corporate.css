@@ -813,7 +813,7 @@ footer {
         transform: translateX(4px) scale(1.1);
     }
 
-    .mob-arrow:hover {
+    .top-house button .mob-arrow:hover {
         transform: rotate(360deg);
     }
 
