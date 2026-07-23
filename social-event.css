@@ -851,7 +851,7 @@ footer {
     height: 60px;
     background-color: #11111145; /* Dark theme match */
     color: #fff;
-    z-index: 100;
+    z-index: 133;
     box-sizing: border-box;
 }
 
